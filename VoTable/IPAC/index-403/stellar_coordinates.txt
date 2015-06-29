@@ -1,0 +1,3 @@
+Target is row 403 of file tycho_2mass_wise_XMATCH-POS.csv
+ra 48.498244
+dec 4.115807

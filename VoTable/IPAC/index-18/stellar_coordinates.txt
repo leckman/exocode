@@ -1,0 +1,3 @@
+Target is row 18 of file tycho_2mass_wise_XMATCH-POS.csv
+ra 44.937975
+dec 0.624871

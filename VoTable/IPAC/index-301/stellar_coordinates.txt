@@ -1,0 +1,3 @@
+Target is row 301 of file tycho_2mass_wise_XMATCH-POS.csv
+ra 44.688246
+dec 3.180964
