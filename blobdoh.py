@@ -2,19 +2,27 @@ import skimage
 from matplotlib import pyplot as plt
 from skimage import data
 from skimage.feature import blob_doh
+from astropy.io import fits
+import numpy as np
 
-def blobh(img_file,out_file='',display=False):
+def blobh(img_file,out_file='',display=False,fmt='png'):
     '''
     Determinant of Hessian Implementation for scikit-image blob detection
     Args:
       img_file: str representing image location
       out_file: str representing save location of processed image (if not empty)
-      disiplay: bool to display image as matplotlib figure
+      display: bool to display image as matplotlib figure
+      fmt: file extension, default 'png', alternatively 'FITS'
     Returns dict of detected blobs (fmt: {radius:position tuple}
     '''
+    if fmt == 'png':
+    	image = skimage.io.imread(img_file,True) #imports as greyscale
+    elif fmt == 'FITS':
+        image = fits.open(img_file)[0]
+        image.scale('int16')
+        image = image.data
 
-    image = skimage.io.imread(img_file,True) #imports as greyscale
-    blobs_doh = blob_doh(image, max_sigma=30, threshold = 0.01)
+    blobs_doh = blob_doh(image,max_sigma=10,num_sigma=10)#, max_sigma=30, threshold = 0.01)
 
     fig = plt.imshow(image,cmap=plt.cm.gray,interpolation='nearest')
     blob_dict = {}
@@ -22,7 +30,7 @@ def blobh(img_file,out_file='',display=False):
         y, x, r = blob
         blob_dict[r] = (x,y)
         c = plt.Circle((x,y), r, color='y', linewidth=2, fill=False)
-        center = plt.Circle((x,y),1,color ='y',linewidth=0.5,fill=True)
+        center = plt.Circle((x,y),.5,color ='y',linewidth=0.5,fill=True)
         fig.axes.add_patch(c)
         fig.axes.add_patch(center)
     plt.axis('off')
@@ -34,5 +42,3 @@ def blobh(img_file,out_file='',display=False):
     if display:
         plt.show()
     return blob_dict
-
-
