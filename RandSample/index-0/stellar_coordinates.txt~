@@ -1,0 +1,8 @@
+Target is row 0 of file random_catalog_sample+1000.csv
+ra 12.0599
+dec 30.69795
+Available files:
+--------  --------  --------  --------------  -------------  --------------  ------------  -------------  ------------------  ------------------  ------------------  ------------------  ------------------
+2MASS--H  2MASS--J  2MASS--K  DSS--DSS1+Blue  DSS--DSS1+Red  DSS--DSS2+Blue  DSS--DSS2+IR  DSS--DSS2+Red  WISE+(AllWISE)--w1  WISE+(AllWISE)--w2  WISE+(AllWISE)--w3  WISE+(AllWISE)--w4  FOLDER
+True      True      True      True            True           True            True          True           True                True                True                True                RandSample/index-0
+--------  --------  --------  --------------  -------------  --------------  ------------  -------------  ------------------  ------------------  ------------------  ------------------  ------------------
