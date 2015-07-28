@@ -29,74 +29,83 @@ import time
 import operator
 from math import sqrt
 
-from img_array.bloblog import blobl
-from img_array.blobdoh import blobh
-from img_array.blobdog import blobg
+from img_array.bloblog_WISE import blobl as WISE_blob
+from img_array.blobdoh_2MASS import blobh as 2MASS_blob
+from img_array.bloblog_DSS import blobl as DSS_blob
 from img_array.diffraction import diffract
 from img_array.thresholding import threshold
+from img_array.array_processing import lingray, loggray
 
 
 #load image arrays
+targets = range(5)
 
-def lingray(x, a=None, b=None):
-    """
-    Auxiliary function that specifies the linear gray scale.
-    a and b are the cutoffs : if not specified, min and max are used
-    Prancer Physics Louisville
-    """
-    if a == None:
-        a = np.min(x)
-    if b == None:
-        b = np.max(x)
-    return 255.0 * (x-float(a))/(b-a)
+def target_analysis(target):
+    image_links = []
 
-image_list = []
-
-for i in range(10):
-    dir = 'RandSample/FITS/index-'+str(i)
-    files = [f for f in os.walk(dir)]
+    folder = 'RandSample/FITS/index-'+str(target)
+    files = [f for f in os.walk(folder)]
     for f in files[0][2]:
-        if 'stellar' not in f and ('DSS' in f): #byproduct of my directory and pre-processing
-            image_list.append(dir+'/'+f)
-####
-'''
-BROKEN: 
-2MASS AND WISE IMAGES STILL DEALING WITH "ValueError: Images of type float must be between -1 and 1."
-'''
-####
+        if 'stellar' not in f:
+            image_links.append(folder+'/'+f)
 
-arrays = []
+    arrays = []
 
-for i in image_list:
-    inhdulist = pyfits.open(i)
-    image_data = inhdulist[0].data
-    new_image_data = lingray(image_data)
-    arrays.append((new_image_data,i))
-    inhdulist.close()
+    for link in image_links:
+        inhdulist = pyfits.open(link)
+        image_data = inhdulist[0].data
+        if 'DSS' in link:
+            new_image_data = lingray(image_data,'DSS')
+        else:
+            new_image_data = loggray(image_data)
+        arrays.append((new_image_data,link))
+        inhdulist.close()
 
-for array in arrays:
-    img = array[0]
-    title = array[1]
-    center = round(len(img)/2.)
-    if img==None:
-        continue
+    for array in arrays:
+        img = array[0]
+        title = array[1]
+        center = round(len(img)/2.)
+        if img==None:
+            continue
 
-    diffraction_points = diffract(img)
-    blobs = blobl(img)
+        #throws out images where data has NaN errors
+        if np.isnan(img).any():
+            continue
 
-    central = {}
-    for blob in blobs:
-        if blob in diffraction_points:
-            central[blob] = blobs[blob]
+        #throws out data bad in w3, w4 WISE band (no noticeable source)
+        if 'w4' in title or 'w3' in title:
+            num_pix = len(img)*len(img[0])
+            white = 0
+            for row in img:
+                for col in row:
+                    if col:
+                        white += 1
+            if float(white)/num_pix > 0.5:
+                continue
 
-    main_row, main_col = max(central.iteritems(), key=operator.itemgetter(1))[0]
-    distance = sqrt((main_row-center)**2 + (main_col-center)**2)
+        diffraction_points = diffract(img)
+        blobs = blobl(img)
+
+        #stats on blobs
+        central = {}
+        for blob in blobs:
+            if blob in diffraction_points:
+                central[blob] = blobs[blob]
+
+        #throws out bad data (no noticeable source)
+        if not central:
+            continue
+        
+        main_row, main_col = max(central.iteritems(), key=operator.itemgetter(1))[0]
+        distance = sqrt((main_row-center)**2 + (main_col-center)**2)
 
 
-#show figures of interest
-    plt.draw()
-    if distance > 2 or len(central)>1:
-        plt.pause(1.2)
-    plt.close()
+        #show figures of interest
+        plt.title(title)
+        plt.draw()
+        if True: #distance > 2 or len(central)>1:
+            plt.pause(1.0)
+            raw_input('Enter to close: ')
+        plt.close()
 
 
