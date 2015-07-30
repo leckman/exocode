@@ -1,0 +1,3 @@
+Target is row 568 of file random_catalog_sample+1000.csv
+ra 43.56396
+dec -58.681103
