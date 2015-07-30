@@ -1,0 +1,19 @@
+from circletest import circle_points
+import numpy
+from blobdoh import blobh
+from skimage import data
+import skimage
+from skimage.util import img_as_ubyte
+
+def avg_brightness((blobx,bloby),blob_radius,image_array):
+    points = circle_points(blob_radius,(bloby,blobx))[1]
+    total = 0.0
+    for (x,y) in points:
+        total += image_array[x][y]
+    return total/len(points)
+
+im = '/home/leckman/exoCode/RandSample/index-0/DSS--DSS2+IR_INVERT-NOLINES.png'
+k = blobh(im)
+image = skimage.io.imread(im,True)
+img_as_ubyte(image)
+print avg_brightness(k[9],9,image)

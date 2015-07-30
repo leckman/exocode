@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: exocode
+Version: 1.1
+Summary: Automation of debris disk detection
+Home-page: https://bitbucket.org/leckman/exoplanets
+Author: Laura Eckman
+Author-email: leckman@mit.edu
+License: MIT
+Description: UNKNOWN
+Keywords: exoplanets astronomy astrophysics circumstellar disks
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Astronomy

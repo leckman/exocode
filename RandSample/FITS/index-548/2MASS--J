@@ -1,258 +1,0 @@
-SIMPLE  =                    T                                                  BITPIX  =                  -32                                                  NAXIS   =                    2   / # of Axes                                    NAXIS1  =                   61                                                  NAXIS2  =                   61                                                  BLOCKED =                    T / TAPE MAY BE BLOCKED IN MULTIPLES OF 2880       EXTEND  =                    T / TAPE MAY HAVE STANDARD FITS EXTENSIONS         ORDATE  = '990429  '             / Observation Ref Date (yymmdd)                DAYNUM  = '0790    '             / Observation Day Num                          FN_PRFX = 'j0790076'             / .rdo and .par filename prefix                TYPE    = 'sci     '             / Scan type: dar flt sci cal tst               SCANNO  =                   76   / Scan Number                                  SCANDIR = 's       '             / Scan Direction: n, s, -                      COMMENT                                  (OV)                                   STRIP_ID=               305274   / Strip ID (OV)                                POSITNID= 's061832 '             / Position ID (OV)                             ORIGIN  = '2MASS   '             / 2MASS Survey Camera                          CTYPE1  = 'RA---SIN'             / Orthographic Projection                      CTYPE2  = 'DEC--SIN'             / Orthographic Projection                      CRPIX1  = 1.385000000000000E+02 /   Axis 1 Reference Pixel                      CRPIX2  = 2.865000000000000E+02 /   Axis 2 Reference Pixel                      CRVAL1  =           278.163538 /   RA  at Frame Center, J2000 (deg)             CRVAL2  =         -11.89148111 /   Dec at Frame Center, J2000 (deg)             CROTA2  =       0.002233941197 /   Image Twist +AXIS2 W of N, J2000 (deg)       CDELT1  =     -0.0002777777845 /   Axis 1 Pixel Size (degs)                     CDELT2  =      0.0002777777845 /   Axis 2 Pixel Size (degs)                     USXREF  =               -256.5 /   U-scan X at Grid (0,0)                       USYREF  =              -22320. /   U-scan Y at Grid (0,0)                       SKYVAL  =          133.4541321 /   GFIND Sky Estimate                           SKYSIG  =          2.512771606 /   Grid  Noise Estimate                         MAGZP   =              20.8653 / Calibrated zero point from CALMAN              CALID   = 'y pw 0 Nov 07 2001 '/ Calibration descriptors from CALMAN            SEESH   =               0.9400 / Seeing shape parameter from SEEMAN             DXFS    =        -0.4138095677 /   Cross-scan Frame Step (arcsec)               DYFS    =         -82.42768097 /      In-scan Frame Step (arcsec)               PIXNAM  = 'nl.pixphot - v 011003s'                                              QT0227  =          131.9870758 /   2.27 Percentile                              QT0668  =          132.7269135 /   6.68 Percentile                              QT1586  =          133.5623322 /  15.86 Percentile                              QT3085  =          134.6043701 /  30.85 Percentile                              QT5000  =          136.0751038 /  50.00 Percentile                              QT6914  =          138.6908112 /  69.14 Percentile                              QT8413  =          144.3547363 /  84.13 Percentile                              QT9331  =          159.3892822 /  93.31 Percentile                              QT9772  =              205.625 /  97.72 Percentile                              BASE    =                    6   / Pixel Dwell (microsec)                       WAVEF_P = '2masss.scn'           / Secondary waveform data file                 TIMER0  =                   52   / Read1 time (millisecs)                       TIMER1  =                 1298   / Read2-Read1 time (millisecs)                 TIMER2  =                   51   / Secondary settling time (millisecs)          ICSVERSN= '981022  '             / ICS script pgm Version (yymmdd)              SCHEDVER= '981228  '             / Scheduler pgm Version (yymmdd)               SCRIPTFN= 'survey.sct'           / Script template filename                     SCRPTVER= '980223  '             / Script template filename Versn (yymmdd)      UT_OFF1 =   7.427007299270E-01   / UT Offset (IC),SOS to frm#1 Cntr (secs)      XS_OFF1 =   1.280000000000E+00   / X-Scan Offset (IN),SOS to f#1 RA Cntr (ASec) IS_OFF1 =  -3.653700000000E+02   / In-Scan Offset (IN),SOS to f#1 Dec Cntr(ASec)XS_OFF2 =   1.060000000000E+00   / X-Scan Offset(IN),EOS to End Frm RA Ctr(ASec)IS_OFF2 =   1.236100000000E+02   / In-Scan Offset(IN),EOS to End Frm Dec Ctr(AS)FOCUS   =                  973   / Focus Setting                                NUMFRMS =                  274   / Total Number of Frames in this Scan          SKIPRDOS=                    0   / Total Number of SOS junk RDOs skipped (IC)   TELNAME = 'CTIO    '             / Telescope -30.165/+70.815 lat/lon degs       FILTER  = 'j       '             / Band: j, h, k                                UT_DATE = '990429  '             / UT Date of Frame (IC) (yymmdd)               UT      = '09:42:10.86'          / Time of Frame (IC) (sxgsml)                  AMASS_FC=       1.08102572E+00   / Airmass (aprox) at this Frame (IC) (unitless)GRP2_SOS= 'SOS     '             / Bgn Group#2 .par params at SOS               DATE_SOS= '990429  '             / Date at SOS  (yymmdd)                        EQUINOX =   2.000000000000E+03   / Equinox at SOS                               AM_SOS  =       1.12000000E+00   / Airmass at SOS (unitless)                    ZD_SOS  =       2.67000008E+01   / Zenith Distance at SOS (degs)                HA_SOS  = '+00:47:22.00'         / Hour Angle at SOS (sxgsml)                   UT_SOS  = '09:35:35.00'          / Scan Reference UT  (SOS) (sxgsml)            ST_SOS  = '19:19:59.00'          / Sidereal time at SOS  (sxgsml)               RA_SOS  = '18:32:39.45'          / Scan Reference RA at SOS ,epoch 2000 (sxgsml)DEC_SOS = '-05:42:15.9'          / Scan Reference Dec at SOS,epoch 2000 (sxgsml)WSPD_SOS=                    0   / Wind Speed at SOS, see WARNING below         WDIR_SOS=                    0   / Wind Direction at SOS, see WARNING below     HUM_SOS =                   28   / Humidity at SOS, 0-100%                      SEE_SOS =       0.00000000E+00   / Seeing at SOS, see WARNING below             BAR_SOS =       3.00000000E+01   / Barometer at SOS (inches of Hg)              AIRT_SOS=       1.40000000E+01   / Air temperature at SOS, degs Celsius         TELT_SOS=       1.36999998E+01   / Telescope Temp at SOS, degs Celsius          ARYT_SOS=      -1.90000000E+02   / Temperature of array, see WARNING below      GRP2_EOS= 'EOS     '             / Bgn Group#2 .par params at EOS               DATE_EOS= '990429  '             / Date at EOS (yymmdd)                         AM_EOS  =       1.08000004E+00   / Airmass at EOS (unitless)                    ZD_EOS  =       2.18999996E+01   / Zenith Distance at EOS (degs)                HA_EOS  = '+00:54:10.00'         / Hour Angle at EOS (sxgsml)                   UT_EOS  = '09:42:22.00'          / UT  at EOS (sxgsml)                          ST_EOS  = '19:26:47.00'          / ST  at EOS (sxgsml)                          RA_EOS  = '18:32:39.62'          / RA  at EOS, epoch 2000 (sxgsml)              DEC_EOS = '-12:05:17.5'          / Dec at EOS, epoch 2000 (sxgsml)              WSPD_EOS=                    0   / Wind Speed at SOS, see WARNING below         WDIR_EOS=                    0   / Wind Direction at EOS, see WARNING below     HUM_EOS =                   29   / Humidity at EOS, 0-100%                      SEE_EOS =       0.00000000E+00   / Seeing at EOS, see WARNING below             BAR_EOS =       3.00000000E+01   / Barometer at EOS (inches of Hg)              AIRT_EOS=       1.40000000E+01   / Air temperature at EOS, degs Celsius         TELT_EOS=       1.38000002E+01   / Telescope Temp at EOS, degs Celsius          ARYT_EOS=      -1.90000000E+02   / Temperature of array, see WARNING below      COMMENT *** WARNING *** indicated parameter not measured, dummy only            COMMENT src keys: (IK)=IPAC Konstant; (IC)=IPAC cmptd; (IN)=IPAC namelist       COMMENT           (OV)=Obsrvtry .par file variable                              COMMENT   Group 2 parms are ALL from the Obs .par file                          COMMENT   non-Group 2 parms w/o (xx) are usually fm Obs                         RF_NLID = 'norot sat s 980730'   / Rdframe namelist version id                  HISTORY * Rdframe version= 980423     jhw.  Bgn Xeq = 01-11-06 18:30:54         HISTORY * DFlat  vsn1.96 981203  Run on 11/06/01 at 18:22:45                    HISTORY > Image Created by pixphot - Version 010925p                            HISTORY >         Gene Kopan  IPAC/ Caltech                                     END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             C‚eC
-Í¢C	ìC	ÇC,êC.±CÿCE²C
-´C	T¡CÎëCF•CnÞCÐ—C§¯CX¨C5—C¾}CzCDPC	MØC	(ßCÓŠCúC¶$C	*—C	`þCì!CöòCßC=CÌ¡C	}PC
-[COÓC“3Ca×C
-ØFC	z³CË-CM[C)›C$·+CµC	÷C„ƒC*³CƒVCJ¶CjgCL­C].CûCHèC-)C	SòCÊiC'ÜC;ÏC7²DC"âÒCÂ…C¶‚CdC	Q€CjˆC)ÞCDfCY‚CæþC	œuCp»CÐCÔÎC¾GCpCÏ~C×ÁCýùC‹ÀCH#C“CØCC
-Ú–C<C§pCYC§kCC­CñþC–C	~.CòŠC/]C+-C2q.C%­
-CJC„ÅCgLC^"C!„ŒC:Cø=C	aûC_°CÿTC©SCSšC³ÄCí`CþíCÚ5C„CQÜC
-	ßC~ëC$ÖsC5Æ
-C29yC ‹C+ÊÖCË¬C<÷CˆgCüC|’C üÐCÝCqC	OtC·CÅ]C	N†C8C¡´CÄâCŒ­C5ÂC‡†C(·CBC¥ÇC_ÅCßòCo½Cå¤CÞÔC	p­C	®†C	ûC
-Š¡CXLCšbC&gCFðøCSû:C= †CÒµCa&C—lCYrCC
-­C
-ëuCz³Cà CšC`.C	ÒlC
-½úC	Ÿ	CždCÁ¬CšMCóXC
-ôkCÐCÄŸC }CoÛCNÔC.¢BCŸpCŠºCæC
-k`CÖßCÉC>C	©@Ch’C	—ÖC
-ð‡C{×CÇ1CFãCÂ9CÁˆC8C]¿C™ÒC˜[CÐƒC
-v7Cõ+C\C‘ÊC}VC!ÖC¹ CDDCOiCÅ¨CÏ C%Ê0CDFCN“5C8—ÞCCACûŠC	(CÃSCçlCñeC	^DC
-Æ<C	Ë—C‚TC	ÁDC‰C
-_éCtxCRuCŸC¦_CöCÞûCp]CÁéCÂ-CæMC)	C”˜C£³ChÖC	ãC]C”,CµØCÝµCèC
-WöCíC
-·CZCQC:pC¸]C†C'xC$CgzC	nNCjPC’RCaùC,XCÊCj¥Cb
-CïC
-T0C
-ânCECC'C+ÌÞC±óCb¸CÒcC>èC„¸Cå:CC‡ÀC	ÌCRC	¬ECÅ_C<ÎC	CËUCôaCWC)C€?C	˜¡CÁ¦CƒC	ò‚C	6C	½ CågCæeC	àËC	ˆXC	±øC	3°CQúCÆsCÏC6üC	á!CÏ¡CUACû'C1—C 	CÉ.C8;CAæC	ÑôC±ÉCh.CÏ4CÞC2CÎCENC	:C
-cC	qŸCkÎC	Z!CÿC3ACýCiCÍCÛjCî^C?C¾(C­šCJaC>XC‹…C	ÏC	ÇC…_CÐíC›C…‡C
-ÇCŸ
-C¦Cx!CLiC	S)C	ÍC°CñCq±CT{CÊËC	†»C¼C«ÎC	7Câ(C°#C C#CZUC
-æbC¥HC
-RŸC	rC	ÇoC	C9jC­ÌC½ÆC0(CE²CG%CžC®‹CÌåC±CßÉC´ÞCƒ CDVC1ˆC	ZøC	‘PCÃCˆXCgC%3CÛC2C;èC„ÞC³~C}
-CéÆCÌhCæCÝC©CmC*\C=ŒC
-(¥C
-mÒC	gC¨ÓCzòCúžCóãCG‰C_CŠÅCÜµC
-í¼C¨dC1CúC
-ûCÎ@C¯þCX’CÈoCÙC	¹ÃCƒ‡CÎêC9ËC-îC“CÍÇCõ%C
-ECú‚C	¾*C	ñC	e'CûùCX"CnCÉvC$C¤BCÁóC	Å×C	Ç…CciCVC0C\ýC‰àC™C·CwªCÅ«CÑâC×²Cø¤CÛ>C< C\ªCÅ°C	&UC¹CFËCÄ9CÒ˜C
-ÊtCóôCñC$àC•ÑC4šCýÈC	ŠCúaCËVC©NCïcC	WC¤%C!hCTC¿?C~9C	&ClâC¦(CÞ5CíÏC2œC$UCvnC&CÉÝC
-ÛDC
-†¬C	=&Cž¥C3îCÜCC0
-CzMC
-[ÎC¤0C
-÷çC¥–C+tCˆC@ŸCsiCÙôCïþCp˜C­„C¢ÁCUCËAC’ŸCò8CþC
-+jC\Cg7C“_C|SCjÄC,C
-²CŒeC¦:CãCnC7pCÖC©‡CéÕCùzC¦øC
- íCëC‡ŽCtSCåCÉC'zC>nC8IC‹C'¹CøîC±±C	ÔC“CÔÚC
- C
-:æC	HCN¦C%hCa|CXKC*+C£fC
-©RC=¦CŒC½!CIjC}¨C¨ïCÀ:CÃ¼CA†Cî(CÛ×C‡CX*C«C›+C#	C€ÆCÄCy™C5³C8¦”C&§TCÅCÏƒC²C	ó©C•wC™C•CÜ›C	ÖC	ÍPC_‹CpÇCT·C¤²CÞ,C¥tCêœC>ÆCNtC§¿C™”Cü&C{¬CßCŽCò/Cà$C‘`CìÃC	îC	Ù$C	µC	»CÕ;Cá½CîACÍ´C¡üC	£ŠC
-ícC
-½¸CŸsC×CcàCQ~C4¦CÌIC~YCõ‹CY(CCºCY{C€áCÚ„C	e!Cè«C)À“CIVßCKŸC/EPC«&C”CÃ‡CÇáC
-R±CÒíC(¿C©iC3	CûRCöJC
-œZC	6HCÄ¨CO?CgYCôCr[C	&2Cò÷CÑâC{cCçCÙWCY>C`ïC$zC3áC¾éCzC	;ÓCÐ–CÈCKC¤^C	"cC
-¡öC
-ž¦C	à–C	·0C	/^C0»CÕ™C¦\CêÜCWC¹C«ÄCÙ˜C4´CSjCÕçC CƒCÌ‹C
-J™Cá5C+ÇáCRC]!C@¦mC#~ÇCòC¡žCYCÛ(C
-”ÙC	 C4€CÅCk7CÍC^âCÜ¤CÚŽCÈ¥CoÛC#bC™ÑC
-j&C
-©$C	2.C+ŽC[C¢YC9C´æCwFC‘CJCŽ6C4zC”C‘ýCæžCè¬CžÌCMîCsC>¢C
-¼ùCiÑCð»C	QåC	vhC²1CSóChCžôC×þCaCBËC	ºCp—CÎ¡C?CuNCÆùCH¬àC™0`C»ryC¡²LCcìfC'ÃKCgXC_CyãCy(Cç¬C	TC	s;C@þCïÁC‹ZCf/C—7C¾CçÑC™›CÙ¼C	zðC
-t“C	épC	&C	[AC
-ÆC.bC+•C	{ÕC2™CÚcCªHC›¬CgâCGÂC4C	}C¿CzCCÁ C§"C¡CùQC¥ C(MC¡êCø^CàªCí¾C™ŒC˜C$C5 C’_C¯qCQèC	UÐC!‡C'4qC“\±D¿WDLñD+^”CÅÌCT›DCtüCÁ(CõCxHCš†CMCUªC
-iC	Ì‚Cë'CøPC~-CEàC©GCMcCòCê‡CÌgCÜCC»bC	%ýC
-š÷CîCi½CåÑC
-F4C	G–C„yC1C{Cç[C	 9C	0
-C
-bC¦†CMöCÞ:CrC	jÞC	H5C¤çC*²C	`¹C|C–ICXCC%«C¦ÐC­VC-HCˆC.CÖäC3JmC»ÒDRÎD‘Ü[DpÆ1Di.Cx!GC%S.C°Cœ4C
-Á‘Cä'C²bCŸpC
-C
-H/C	FÞC­CC 0CaˆCO»CÞÉC2C}CƒtC”FCúÇC	ÂEC/dC‚ÜCãCJfC	÷;C	—ÄCÜÆCGC¥žC!³C
-›C	mèC6ŸCøíCíðC’%C
-$C	önC2íC
-C‘aCÅCý›C,ÙCšCØ7C÷±Cá¢C½¤C	*KCq2C£¢C,AC£âÇD1wDoaîDB­€CÜ1¨Cd!=C ³CŒúCD«CâŠC'CfCÏjCñäC	,,CZšCDSC]*C¶rCÓ)C€ÌC&CCCôHC*þC}°C{CÂCG#CZCàC
-~!C
-jCfÚC0³C-ýdC/Ž†C [CVìC
-ÁC	¸!C
-ëC1¾CJçCx|CP:C'OC	ÿïCCÒïCûQC÷ÅCgðCCC‰
-C/ëC	q-C	Cø÷CA—C^rC½ô©CôqCËÁC„KøC4‹.C­@C¯*CRC»Cl¥C¯öC[RC÷ãCQÂCtšC‡ÙCtC[,C
-\šCùÁCb’C
- ×Cì®Cÿ,CCD.CeÒCóCõ{C¾nC	­C
-£ACí¤C>	åCo™ÎCtŸxCHA\CÃCÜ$C	¿OCfC$CÑËC/ýC,CXC	å¡C	&QCYCOC½ËCÕCsCrCô€C	aC?C¸JCRVCÑÉCÑØC@/CVW‡CG4.C(nCE:C‚C
-ÂC`-CgFC¥?C4%CGœCã‡Cé#Cö`C‰C:<C›ÝCâQCqCMðC
-“ÖC’CãCÔÙCÈ0ClØC:C.*C06CŸCÞCºjCQNC‡ç,C‹%C^gÒC$LŒCléC
-žC)`C
-¯CÔ·CÕÄCú8CuCÿýCò‰C®pCª«C{mCŸ{CÅŠCÊqCUßC
-z’C¦C…çCÂöCèkCÇ CÀ­CçƒC‡¯CVkC]ÌC	v@CBjC,õC»8CDCž„C6ŠC.C¼CÅ•CB‹C6«C› C
-6CœC
-OhCC¿C:ëC9—C"§C+üCøtC»xCæ’C§çC
-}òCq€C@€ÝCi‰ChÌâCAòÚC‡CSC1eCÓ²C–ÊC C„IC:`Câ@C%yC¸ C¼.CûÁCu1Cñ‹CÑTC½CïÌCŠ¬CñC‰CÈ“C5ïCâ(C
-À»C
-|”C
-OªC	´£Cb|CïC`ÆCHèC’C…CFCsC‚ãCÃ´CS?CjžCPCž­C¤˜C	h}C¾RCB”CËiC…ÄCãCŽ=C×Ct¯CGbCÌæC(C	xëCî¿C$¥ C4·C.¸C„YCjÂC©™C@<C{sCú¿CC
-µ­C	ã&CŽÓC«C'CüCß£C—×CãyCÕ½Ca C	G COÑCBIC
-£CàjC>ÈC€tC×&C	£ßCõCŽØCv7CÞDC™C¹óC-‡CAŠCaCõàC¥0C,ÇCqCDGC.LC°óC¹CøŸC	ÁÞCäCÓICÇÜCÿïC„âCŒCÎ:C™©C	÷CêsCn"CµRCø"C²¢C'|C:CC’C¡C¦C*lCÐ4C
-2AC	¿¢CØ…CË§CeƒCÉŒCXàC	ôÂCÜ$CòCUFC	$åC	õVC	}C	s C@C£DC*ùCÜ$C+vC
-[öC	k[CÓÝCûòCqWCƒšC¥cC:CúC ùC¦ØCC±QC	DCá§CÝGC>}CbNC	£rC	[ÏCg$C*ùCt»CàICzpCkzC×šCÇÎCŽaCO C
-ÐCJ–CdmCæC/&C`rCõZC0ûC;kC4ÁCå·Cñ×CWC?oC$½ðC2ƒÌC,7´C­C4CCpC¦úC	-C	zŽC	„BCÂíCŠ¥CIBC˜LCƒPC…C·CwtCCvC
-§åC	˜CÿC	BÕCåC¶}CçICÅrCçBC	3C	ž)C	çÉC	g}C0CFeC‰^CòšCÒ¼CÊ†CU2CõhCh¨CpCÙåCC‘·C½ñCADC„¶C
-ÎjCS
-CÓ)CÂCm-Cr¹C†LC¬óCÁC½VCÇCß£CÞC;IÿCL¦¹C<Š&CaèC–ÃCˆOCðC	ëGC
-Ì'C
-°lCöèCž¥C	Ý×CHˆCWòC0³C3©Cb¥C‡.C éCú¨CWCöÄCHC	öCyCOC	bC	Ô8C	ŸÄC	ÌCI=C{²CÖ½CÀlC¡ôCjC»!C²%CzCflC¹`CÐ~CˆCr§C'ÀC~Cœ1C	FÛC +C¯'C€WC4CõÒCÙC%uCý=C+/COÀCf'C ,ƒC;%·CJ\áC8HC³C‰CnCÁÑC
-;C¤øCµ!C	}ÞC¤~C÷{Cè`C ZCùúCç}CbˆC•C½¼C‘fC ÃCñCgC	ÍPCí­CäC	 °C	CC#2C…Cf„CìC´0CŽVC¬ÃC!<C CÄtCú½Cî«CcjC³ÚCFnCIÆCôDCÉ´C€ÁC
-“CÆñCìCsFC-¶CtùC ¦ðC^ÚChÆC òCÿºCÃC"×SC)ùšC ?zCmC	êCïžCVëCmÎC
-gÃCzC	©‡CyáC	bêC>ëCrC#GC½äC¦CCwÙC!C&ÝC÷¦CÜXC	CË5CŸC¬AC	®C+CôÐCiŸC>qCºüC÷ÙC¬9Cz;CôºCíPCèûCÁZCÓ1CÃCzìCuCšC©?Cø³C	QßC
-½GCFnCdÎCÅüC1ŸCB2CAß`C0â^C ª¸C@C–óCq›CW7CÛºCõ¿CC	Ct9CS CCÀLC	¦ºC	²C	ÑŽC
-0C
-ÈC	°C
-!ñC7CiKC*BCÁQCÝCbCrˆC1Cˆ¢CÉÌC–[C
-ôâCŠC
-äåCxÚC#~CÂ®C‹ùCtùCïCT@CInC	ÔC)iCï C‡•CÄ CÔwC	°ÙC
-±aC
-Ú½CL÷CŸ„CŒ±CòzC Ã-CKöC .C¾øWC¾­ÑC‹z•CA´sC £KCû×C"hC°[C°ãCDC	¡:CÌ=CöCáôC	>qC	áùC	öÌCb4CÅžCÀcC	¶C	=C…C’?C%Ä>C"—CÔýC9mC¿çCšâC	çðCc”CŒ7CgªCÙØC¿.CKhC
-þC1åCÿDC,ÖC	’ïCú6Cn`CîCCX'C•ØCT£C	ÝíC
-:ºC
-#wCæCLCŠCÙ.CC—CÅrCÎ²C@Â=Cµv1DC…qDŸ£kDŸ*AD6ëPC›ŠC5BsCÍ¿Cz[CkCùÅCÀúC~êC	ú'C	éÝC‘CC‹2CÖñCš¨CçàC¹ïC	Å|C	Ç'CPÙC'N~C<RYC4Ú"CMCdWC
-êC
-‹pCØCÝC	[fCÈ˜Cø{C!8C÷ÑC\“Cx.C
-C¶ŠC
-žŠC
- wCLÒCRŠCiãCŸCCC1eCÿñC'fC
-Æ›CRŽCôÆCQ—C—C ëC*\\Cu¶mD(ÂDåéÝEKpàEIß‚DÒÏwDbžCXL®C ™ECbØC¸C¡5Cš¢C•"CÁ	Cé9CÁCÌ“C'ËC«*CLµC^C„ÓC	ÕøC
-'
-C›BC%L’C6éC0+5CÃC\yCÚ’CÛèCsÛCKÚC(mCEðCÇ{C³RCBŽC‡ÉCÊC®ÀC­C	ÛCÀõCîC¶üCtAC`C´@CÂCàPC”ˆC	êhC
-kCÁƒCÜQCÉ—C"¸ËC0
-CŠi½DJëXEv!Eˆ"¢E‰%1EêCD"Š¢Ckr?C&ÕCœÐC)µCFPCO WC4§³CÖ×CgC#ÑCä4CúCZÚC
-àßCžC MC	´C	¡YCìzC‘ñCœùC‚Cp‹C%C~ŸC(CBHCXiC ‚ÇC·®CŠTC-@CƒC+âC	0CÃyC C¤C©ÓCŒKCsÊCCìC|ÙCãÀC
-\?CLC
-ýC	:4C	ÐoC#C¢CŽ CæC)Ê„Cw÷ÆDDÐT«E>ò:ECM¢DÍš~CÿXkCVîC#®üC!l½CDñ"C…s×ClŸCbljC%#vC®RCQ¢C¦ýCqfC÷`CQºCöHC’”C§	CTÊC”=CQ[Cq¬C…ÀCúCÁ.CÚ_CC«CÃèC0w CSëC	ð=CÐMCÿfCyaCÚCÊÊC¾C=PCC§Có¨Cµ]CÍœC?œCqCó“Cã²CÈþC
-MCdÉC7CŠúCqÎC$á%CItòC¶ˆ¶D?àðDœ8DcD3C”²ïC2…;C.ãC¨CK•CdCšB|Cj¯¢C%ÂCÍñC
-¾<C
-K×C	?*Cv‹CöXCNþCÛC"¸C)·C
-ã C,…C`C÷`C..C
-Ï C(VCîæCÂ{CC/¢C§/CvCœ±Cú’CsCï’C^CÒ×Cg C~C¥C}C€‡CV4C
-ŸCºC¹Cw,C	tRCàSC$ÓCœC,s:C5C-à¥C.¤SCU˜»C”ô{C¾Â"C¶Ü’C‚êC6€}C‚ªCCV«C1‹CaûClÏ´C?¦üCCýßC
-Ù@C
-F–C	ŽC™ŠC9ÊCBÃC!âC5¢C‘ãC
-Ã%CYpC£
-CUÏC.3CSZCÏøC¥?C,²C7m C…ãCÄCm4C”\C	SCÞÂC¢ÄCshChrC¿ýC$âCl—CåsCÃ¤C>.CãÎCPõCúŠC	KâCF#CáˆC¹ C+¡7CG.³CSë-C<“ËC%þ(C&ëC2™>C>T)C:F¬C(ŸCÁCñeCÂ>Cí2C·½C%N)C(ªÖCQC°oC!ÙCfC
-sC	(©CìC­·C{CC8¬CBC2•CüC{CCòÚCC	ã™C²Cb¸C1*CeÞÏC‰—ChðC
-4½CQCýHCP0CÖCöîC*ùC{WClöCÉCôÖC«>Cì—CìÞC
-;C	ˆ%C‹—C
-éÁC»™C*	C:‰ËC@e˜CN
-ƒCTDC9ÊìC3¢C:‘C)
-¯C@%PCB~C*áfCãC¨
-CöC—C…ûCÆCºYCþCçLCzæC
-ÄC	æ:CICTîCZ<C[C]VCkçC¤0CÝiCrC	†§C	¸C	!CßC™C:Ù)CƒÝBCšé'C	^åC4ÖCÅ¹C	ŽµC‹,C¶LC÷FCOåC
-6éCSxC{DCnùC«šCG‚C
-ñyCWXC{nC	ìjCCºéC8ÞCK[ÎCEÎŸC:ÌÏC4àC#•ÌCpC¼žC+“CQÛÐCWðÁC4žªC=ÌCWC
-’óC
-GjC
-
-CiCGCN¦C/¿CÊPC–ºCÛøC$ÄC7úCúCUgCìC9PCfCCÞC¿ºC
-¨ÊC¡C	Ñ¨C	@öC,C,%ÕCiÛC‡¼ÀC	¬éC	tCcpC	%KC„CuØC>ÍCyŸC	Q[C
-ÊCuZC»>C	=–C
-ò}CSCéäCË|C
-éÁCTôCøNC-*€C9ääC1ŽòC °sCwÐC7SCHðC÷XC$“=CEõúCL2C-„‘C­ÈC8þC	D.CöC	C	>ÉC	»‡CYJC‹cCVœC
-ëCØLC.¤CÙÁCCcuC®*C¢CÆìC
-ghCºwCÔCMÝC
-°iC®
-C
-§ñC C1NéCC(7CÃµCtyC
-ùªC	h¹C
-‹žC¾µC±¤C	UÛCê[Cœ£CóC’@CÓC£jCÂ)CfÐC¤ÙC	C	ê‰CÕ2CDC¼ÃCMÙCN6Cï\C
-
-ÞC	²ÅCgßCèiC'4‘C*;·CC¡tC¬KC~jC ¦C,¶C	rC\°CC
-X,CrÔC²ùCu¿C	4±C«»CÀCH‰C¶C¤C
-„™CÞ:C˜CC¹ªCªqC
-G°C	?ªC	”DC¹CÁCàúC7m•C"ý@CŸuC®øCÜ¥C2‘C	#tC€gC„!C–C(¿C¯\C¦¦C–C>†CŸ"CË‡C	½C‡¶C
-ZÝCø=Cí¦CÏCwDC
-n)C
-ÁïC}#CRþCŽCRCØ™C
-“C ÚCœC\5CC	CuÍCºÜC½C	±sCðCµ¥C'ÿC(CÛCÚCÚñC2IC	‘™C×EC:^CÞaC&ìC	MC”¸C	:C
-#C
-CC
-¸¦C×C^ƒC8ÿÓC‡~CYCÙ\C9ðC'ýC–CïCY-CGàC€•C-ÇCJCCÍ	C]]CîíCÊÔC‡C	xCç/C	lãC
- UCˆˆC~CfC‚8C
-ÞC¬_CâC	4¥CøpC:4CÌnC%“C	þÞCtÌC
-`ÊC?"C
-ÜaC¼ICfèCí°C¡C
-—ÇCúPCvNC	}ªCóC%ÞC•HCçàC“ÛC	[CòCœC	~çC
-§¸C
-ò<CpCVÎžC6_îCC˜C$C'œœC¯ÙC´„C	+¥CB“C€”C«CòµCÜëC3²C4ÛClCœLC«Cœ.CUKCÊlCÞ3C	µCëCfüCôCk¦C+C–C¨¿CaÛC	IfCyÐCJÁCxC	ó?CóC¥›C«-C	ÞHCÑCŒ\C2ÉJC?UC.T¹C;’C
-úÉC
-ysCííCìÖC$»ºC?Å`C?”C$QCC© C·C5C	˜žC	çŠC	Ð”C.\GCûCN»C#À'C'KgC5C>C
-ðSC}3C¬ÑCQ,C¥hCGÎC¢ùC¢öC»ÀC	s¼CÓC[ºC™Cp¦C$ËCÞjC‡êCš±C_CZ§CÑcC(C¦ÇC9;C	¼C5÷C«
-C	ô C<ïC,C™CÝšC
-ù C™ÞC)ãâC[‡ŠCzö(CZò;C&Û„CÃjCkRC&&CawCA-ªCy$¦Cx¶ÖCB8nC.ÚC
-UCOCž1C/™C4®CjfCÈÂC½øCaÿCèìC`C/‰C1ÍC
-A!C	!ËCRCS
-C
- hCC÷C¾ÜCü8C=/C¢rC0C¶<CbMCG¥C®CªC$>KC6`CÀ¡C ìC
-øC
-C	øvC«žC6mC	4:CtC)¢CrÞC¨™Cy‡C
-ó COC0I¸CkƒêCˆÆUCl·C/ŒC­ÃCe'CßCšòCD ´C¾5C€; CGqiCMüC
-ÛéC/ÖC¡IC	JCªC©ëC”•CÚECùCà7C‹vC	ù¦CxCUnC`ŸC	á)C/C‹mCn¥CÄCáxC
-±eC™ÿC C'§C¥CÏøCQC¤ÐCQpCqC­9CÒ‘Cö¨C¤ãC@ÂCØ„Cå‘CP÷C	»CxCŽ9C&ÙCDÒC¾¦C	ú‹C´C"¶CJ<CaFUCI³C"ú§CLÝCø«C	ÒCXsC*I¾CLôºCO*C0‘®C7PCŒ½C	+rC	Ì!C
-qC
-TöC	ÚŠC;~Cü^C‹C`2Cü(CpCÿCÂC™C	RÆC]"CsÉC(=wCû¶CjuCthCëIC6ACâC³qC‡ÞC.vC
-tÈCÄCpCuóC	KõC®þC„C”ÐC'åCÒCºÃC	ÀC	 CèõCçC¿C<àCûèC
-c¬Cj	C BC&˜CÄèCºÁC`‡CûÃC	þÖC
-ŽëCRËCÉ”C$ mC!ÛCáC7C
-ú9C
-&C
-frC/“C¬‘CéeCæéC%ƒC°¥C}oCvZCvBCŽiC¶C³ÊCbC,:C;h£C.TxC8œCúxC²CJÖCÊCÀÂC2CþþCÍC
-½ C³C
-¥C’CrCcCþ1CTEC]†C	ÉnC	æ‰Cï/CúeC	ŽC	›$C	0+C	ÈCv}CZ)CÊRCg5C­TC	ŒàCz²C–mCÅèCðBC	CÇOCfyC"‰VCŽ`CK%CÃ^C
-ŒC	ØÁC
-e!C
-ûmC˜CF[Cã‰CêÛC6àCyCJC’xC®]C¥¼C¸éC+ÛC:krC-ðCDC
-Ø%CGCGÐC|HCàhCi CÎgC#ËCãäC
-sªC
-”ÍC	©»CÆ<C~C÷6C	‹;C>DCNCw*CNCæÔCt”CÓÕC	}C·ƒCnàC7ærC9l÷C"¹ÓC©ñC™ÁCìÁCTNC mCø²Cß]C'ZCßîCC1VCÖÑCBÔC
-\ÑCõyChÁCPýC‹ŸCy?C2šC÷ÊCcC”5CH¬C6qCI¸CÞýCØ?CøC#çßCízC+C—@Cê·CD¨ChC1C±ÆC~!CùÞClÈCÕ`C	€C	<ñC«RC#zC	²6C½kC—ÐC'.ùC"uÞC^CÓ×C
-3ÌC
-	C
-¶þCªüC5¤Cfê†Cm¬ C?TCÏØC	ÕC	¾¦C¤»CÅCÃ<CkãC[Co;CÂ\Cš¤CCøC	aCpACUëCgDCírCP´C/«CÝZC	±¡CÖCáCCs¥C’‘C _CfCùìCNDC]CçÍCØDC´C	0­Cä7CÜÕC†xCçeCG“CŠ±C¹nC­™CÏ•Cj³ChÉCzMCæýC(xC7ÆvC.é:CïÐCôC!CC‰CˆvCìbC6ÉôCiÿ½Cp„‰C@aJC+C
-OCöÏC²oC«C”=C
-”°CL¤C—áC?C
-ä7C	7CCú®CiCÙC	C=#CÖCéCð'C@	Cy_CneCÀôCKC›CkC«¥CíCYBCúËClhCÀCâNC¹RC	…C¿ùCÓlCyCÕ«CRÓC‡C	?C	Ñ-C­…C:CC@CûkC#„C.œîC&h_CCBC±¥C(CC£,C OUC9:!C<¶|C$§¦CdƒC	¥C
-ô@C?Cû¿CR7Cm±CJÄChC³ÈC<¸CõtCaÏC	¡rCŸCzëC{´Cê#CÓ×CmêCŸ3CC³àC¡LCF)CòNCýCÜCbTCjŽCCiPC~C-ÎC
-oCù7C`LCœÅC®CCŽC½NCTaC0ìCÔC	SjCwcC	Z/CòVCq'C¾¦C\QCC
-äC	qêC	„6C
-A‹CN°CÊC¹RCÞÝCDbC
-zˆCò^C	À:C ÀCCGºCD²C­uCöÅC@Cè³C›ÕC8[CÉäC„>CÇµCÃCºŒC	0C¯‹CCk—CÜC³'C¯yCó¬CM‘CCî¼C=…C¿BC	€
-CF#C|‚C	ÂåC\ÍC
-âsC	iCS÷CýÎCÒ¢C‚ìC®C4ÆC	Ö¿C)ºC¯RC	C
-[WC‰UC@MC	ÙCA›C5CD~C
-‰«C…CWCßýC&DC
-WC
-Å!Cn…C“½C
-²zC
- KCÞCäiC®¯C—ŽCœ{C¨ C"M¸CŽ•C	6C	Ð3CëóCÅƒC¥|CˆÌC=ðCÄCåúC½~CüZCí˜C­cC	KuCRðCÊ$CCUÙCøÐCPC½Cª¨CÒŒCäÌCDºC
-ª¥C	NÁCI.Cp!CÚÆC ãC	RCþqC%§CyiCfÓCáßCBCk€CVaCw­CùªC>CgzCÆÄCñ®C'C
-fÉCÍC€òC¶\CüCcQC)`C%CtdC
-ÃðCŽiC‘CäC—¤CýuC9CÎ¸C¦¥C	ºCï¤C!ËáC+ƒOC"CopC	7¶C²0C	û#CHòC’4CC,N|C-k¨C’nC—4C  CZ CcCCÒCC	ÆgC:ØC
-±ˆC@"Cè%C5›CcÞCÍMCVC±1Cf·CˆšCÙÍC0èC+ÊC^wC
-y¢CêÜC)WtC/¤™C"CRCWÚC|óCC¯C3äC@COC¿vC{²ChOCíC
-`nCVCüTCÛ²C	Ä¢COjCqCãßC½ÅCcC¶úC%ÇùCkCÉšC	•èCtKC	BªC
-¬dCøŽC¿C,¦C-"HC!GËCšC±WCÀC¹ZCù C	Ì)Cã·CÝ>CúðC€OC®òC
-RC&èCÔØCØ²C¤@C}C7…C(‚CƒëC•C¼C
-ÂCæ³C-Š_C5ÅtC&)C<ŸCŸ—CáCìChêC22Cæ¯C‹áCË}C¯™C	_pCË‰C	ŠqC¿;Ca€C`)C
-FkC?—C6CÄCš CbCùCƒCÒ*C	BC§ùC\CBÅC
-¿CzƒC›NCe¾C½C›C!wèCß¶CnsC
-[ªCÓãCÁCy\C‚°C	±C
-ØC²eC~Có=CømC	*¢C	P¯CxCþcCì`CÎCÔC	áGCkéCºþC"ábC’C›PC
-z‡C
-EC–¹CÁeC¨)C"O«C*ùŒC)ñÃC<ÅCÍ@CßCÝ6C^‡CC|TCh.C¨†Cè«C^C
-F6C7'CFÿCp±C	nC¶ÑCf#CC°›C¾‘C	€tC6GCC_ÕCCÎBC¯¥C@CMÿC'ÄCUÉC|…C<CXC	‰BC	‰CÑâC>‘Cw9CÞCLCÖÔC¤ýC>%CõCàyC	"CÁôC~ÁCÝÖCîC
-CÕ3C	ñwC~1C!gC4ªC;\C9O‚C3NC \)C`ÒCÃCöCC…CõDC†¢C6CÞåC»Cl•CUC	õAC	«C3ñCêCItCñC2TC:ÎCCoÜC½ãCq×C ëCÒ C”wC×C	zCO‡C´CIÇC±fCˆ@C¡C†TCøGC‘C™JC‡ÌCù|CbyCÜC7C°ýC¨×CÎ—C•GC	µYC¬˜CDsC
-‰½Cî\CÜ©C›xCD[C.ÜCK¢ÁCIòýC4Ö
-C&ÛC=çC
-ÿ5Cv[ClCž„C1\CiýC.sC÷ÁCfCsxCóC×áCÁCáC1Cû5C> CÏxC€CÀ½CÐ“CæyC‹C7C8C[C
-€“C\CíC[UC	"5CÜ|CÀ)C`<CÓíC	BhC
-VCÅfCOpCüøCt’C8úC_“CµºC[AC†¥CVC’„C
-°#C±C	ÔðCávCtçCê½Cù•C&éC>MC9>VC"EÍCMêCÜgC	ÏCÂCA¶CiýC	GCøCëCMCÈØC¢CßCÈ?CÙ_C@CVƒCCCfC>^CppC±C`@CÙCÃÝCtÝCeCCóšCfÑC¾ÕChsC‡CIC8hC	EóC›…CC
-tCâòC
-¡|CŠ-C³±CåCj­CìCö\C`öC˜iCgCêÆC	R•C
-nÍC	H–CåtCŒCfC	È¡CÂ"C7ºCx&CYC	œnCõâCx	CqìCC–C–ÄC
-¶CzCÑ•C9å                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
