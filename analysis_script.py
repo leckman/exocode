@@ -28,25 +28,28 @@ import numpy as np
 import time
 import operator
 from math import sqrt
+from tabulate import tabulate
+import csv
 
 from img_array.bloblog_WISE import blobl as WISE_blob
-from img_array.blobdoh_2MASS import blobh as 2MASS_blob
+from img_array.blobdoh_2MASS import blobh as MASS_blob
 from img_array.bloblog_DSS import blobl as DSS_blob
 from img_array.diffraction import diffract
 from img_array.thresholding import threshold
 from img_array.array_processing import lingray, loggray
+from img_array.pixel_regions import circle_points
 
 
 #load image arrays
-targets = range(5)
 
-def target_analysis(target):
+def target_analysis(target,verify=False):
+
     image_links = []
 
     folder = 'RandSample/FITS/index-'+str(target)
     files = [f for f in os.walk(folder)]
     for f in files[0][2]:
-        if 'stellar' not in f:
+        if 'stellar' not in f and 'directory' not in f:
             image_links.append(folder+'/'+f)
 
     arrays = []
@@ -56,56 +59,155 @@ def target_analysis(target):
         image_data = inhdulist[0].data
         if 'DSS' in link:
             new_image_data = lingray(image_data,'DSS')
+            survey = 'DSS'
         else:
             new_image_data = loggray(image_data)
-        arrays.append((new_image_data,link))
+            if '2MASS' in link:
+                survey = '2MASS'
+            else:
+                survey = 'WISE'
+        arrays.append((new_image_data,link,survey))
         inhdulist.close()
+
+    output = ([['Image Address','Target Index','Survey','Number of Central Blobs','Main Blob Center','Main Blob Radius','Main Blob Displacement',
+        'Percent Outside Diffraction','Threshold Value','Percent of Image White','Validation','Error']])
+
 
     for array in arrays:
         img = array[0]
         title = array[1]
+        survey = array[2]
+        
+        result = [title,target,survey]
+
         center = round(len(img)/2.)
+        num_rows = len(img)
+        num_cols = len(img[0])
+
         if img==None:
+            result.extend(['NULL','NULL','NULL','NULL','NULL','NULL','NULL',0,'Image does not exist'])
+            output.append(result)
             continue
 
         #throws out images where data has NaN errors
         if np.isnan(img).any():
+            result.extend(['NULL','NULL','NULL','NULL','NULL','NULL','NULL',0,'Image has NaN pixel errors'])
+            output.append(result)
             continue
 
-        #throws out data bad in w3, w4 WISE band (no noticeable source)
-        if 'w4' in title or 'w3' in title:
-            num_pix = len(img)*len(img[0])
-            white = 0
-            for row in img:
-                for col in row:
-                    if col:
-                        white += 1
-            if float(white)/num_pix > 0.5:
-                continue
-
         diffraction_points = diffract(img)
-        blobs = blobl(img)
 
-        #stats on blobs
+        if survey == 'DSS':
+            blobs = DSS_blob(img)
+        elif survey == 'WISE':
+            blobs = WISE_blob(img)
+        else:
+            blobs = MASS_blob(img)
+
+        #Number of Central Blobs
         central = {}
         for blob in blobs:
             if blob in diffraction_points:
                 central[blob] = blobs[blob]
+        num_central = len(central)
+        result.append(num_central)
+        if not num_central:
+            result.extend(['NULL','NULL','NULL','NULL'])
+        else:
+            #Main Blob Identification
+            main_row = center
+            main_col = center
+            distance = 100
+            main_rad = 0
+            for (x,y) in blobs:
+                d = sqrt((x-center)**2 + (y-center)**2)
+                if d < distance:
+                    distance = d
+                    main_row = x
+                    main_col = y
+                    main_rad = blobs[(x,y)]
+            result.extend([(main_row,main_col),main_rad,distance])
 
-        #throws out bad data (no noticeable source)
-        if not central:
-            continue
-        
-        main_row, main_col = max(central.iteritems(), key=operator.itemgetter(1))[0]
-        distance = sqrt((main_row-center)**2 + (main_col-center)**2)
+            #Percent Outside Diffraction
+            altered = threshold(img)[0]
+            main_region = circle_points(central[(main_row,main_col)],(main_row,main_col))[1]
+            for blob in blobs:
+                if blob != (main_row, main_col):
+                    blob_points = circle_points(blobs[blob],blob)[1]
+                    for (x,y) in blob_points:
+                        if (x,y) not in main_region and y < num_rows and x < num_cols:
+                            altered[y][x] = False          
+
+            main_large = circle_points(int(round(1.25*main_rad)),(main_row,main_col))[1]
+            inside = 0
+            outside = 0
+            for (row,col) in main_large:
+                if row >= num_rows or col >= num_cols:
+                    continue
+                if altered[row][col]:
+                    if (row,col) not in diffraction_points:
+                        outside += 1
+                    else:
+                        inside += 1
+            try:
+                result.append(float(outside)/(inside+outside))
+            except ZeroDivisionError:
+                result.append(0.0)
+
+        #Threshold Value
+        thresh_results = threshold(img)
+        thresh = thresh_results[1]
+        if survey == 'DSS':
+            result.append(float(thresh/255.))
+        else:
+            result.append(thresh)
+
+        #Percent of Image White
+        #over .5 correlates with bad candidate in w3, w4 bands
+        num_pix = num_rows*num_cols
+        white = 0
+        for row in thresh_results[0]:
+            for col in row:
+                if col:
+                    white += 1
+        result.append(float(white)/num_pix)
+
+        #Visual Check & Error Messages
+
+        if num_central:
+            if verify:
+                plt.draw()
+                plt.close()
+
+                diffract(img)
+                plt.title(title)
+                plt.draw()
+                plt.pause(.01)
+                result.append(raw_input('Visual Verification? '))
+                plt.close()
+            else:
+                result.append('')
+            result.append('NULL')
+
+        else:
+            result.append(0)
+            result.append('Image lacks central blob')
+        output.append(result)
+
+    return output
 
 
-        #show figures of interest
-        plt.title(title)
-        plt.draw()
-        if True: #distance > 2 or len(central)>1:
-            plt.pause(1.0)
-            raw_input('Enter to close: ')
-        plt.close()
+t = time.time()
+full = target_analysis(0)
 
+for target in range (1,1000):
+    k = target_analysis(target)
+    full.extend(k[1:])
+print time.time()-t
+
+with open('FIRST_RUN_ANALYSIS.csv','wb') as f:
+    writer = csv.writer(f)
+    writer.writerows(full)
+
+print 'COMPLETE'
 
