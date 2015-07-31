@@ -30,7 +30,7 @@ with open(download_catalog,'rb') as csvfile: #rand cat
 size = 1.0 #arcmin
 
 for i in range(max_indices):
-    folder = containing_folder+'index-'+str(i) #rand cat
+    folder = data_container+'index-'+str(i) #rand cat
     if not os.path.exists(folder):
         os.makedirs(folder)
     fileList = os.listdir(folder);

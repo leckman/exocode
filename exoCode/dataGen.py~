@@ -2,7 +2,8 @@ import time
 import csv 
 from analysis_script import target_analysis
 
-################################################################################################
+
+#### EDITABLE ##################################################################################
 
 data_container = 'FITS/RandSample-2000/' #alter to analyze a different set
 
