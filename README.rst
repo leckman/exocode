@@ -7,7 +7,7 @@ data to identify candidates that might have circumstellar debris disks.
 
 ---------------
 
-TO USE:
+**TO USE:**
 
 * Use dataAcq.py to retrieve the images for one of the provided catalogs in  Catalogs/
 
@@ -18,7 +18,7 @@ TO USE:
 You should only have to touch the offset code at the top of each program (denoted 'EDITABLE')
 to accomplish your analysis
 
-Run Guidelines:
+**Run Guidelines:**
 
 *Assumes data_container variables in each script are equivalent*
 
