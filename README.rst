@@ -24,10 +24,5 @@ Command line: (in exoCode containing directory)
     python dataGen.py
 
 In python:
-
-```
-#!python
-
-from exoCode import dataAcq
-from exoCode import dataGen
-```
+    from exoCode import dataAcq
+    from exoCode import dataGen
