@@ -1,4 +1,4 @@
-# ExoCode #
+**ExoCode**
 
 Generates .csv files including data on the existence of various features of interest 
 from the Digitized Sky Survey (DSS), 2-micron All Sky Survey (2MASS), and 
