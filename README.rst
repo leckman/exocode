@@ -11,7 +11,7 @@ TO USE:
 
 * Use dataAcq.py to retrieve the images for one of the provided catalogs in  Catalogs/
 
-* * You can also use one of your own, provided the format remains the same: ra,dec (degrees)
+  * You can also use one of your own, provided the format remains the same: ra,dec (degrees)
 
 *  Use dataGen.py to run analysis on the downloaded images and output the results to a new .csv
 
