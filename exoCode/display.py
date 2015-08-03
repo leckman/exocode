@@ -1,3 +1,24 @@
+'''
+Displays all images in a given target folder for convenient visual validation
+
+Copyright (c) 2015, Laura Eckman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+'''
+
 import pyfits
 from matplotlib import pyplot as plt
 import os
@@ -8,9 +29,9 @@ from array_processing import lingray, loggray
 
 ##############
 
-def display(target,save=''):
+def display(target):
     image_links = []
-    data_container = 'FITS/RandSample-2000/' #alter to analyze a different set
+    data_container = 'FITS/TAM/' #alter to analyze a different set
     folder = data_container+'index-'+str(target)
     files = [f for f in os.walk(folder)]
     for f in files[0][2]:
@@ -60,7 +81,7 @@ def display(target,save=''):
 
     for i in range(len(img_2MASS)):
         img_width,radius,center = img_2MASS[i][2]
-        axes[0][i].imshow(img_2MASS[i][0], cmap=plt.cm.gray)
+        axes[0][i].imshow(img_2MASS[i][0], cmap=plt.cm.bone)
         axes[0][i].set_title(img_2MASS[i][1].split('/')[3])
         crosshairs = axes[0][i].plot([center], [center],
             linestyle='none', marker='+',mew=2,ms=10,color='MediumVioletRed')
@@ -69,7 +90,7 @@ def display(target,save=''):
     
     for i in range(len(img_DSS)):
         img_width,radius,center = img_DSS[i][2]
-        axes[1][i].imshow(img_DSS[i][0], cmap=plt.cm.gray)
+        axes[1][i].imshow(img_DSS[i][0], cmap=plt.cm.bone)
         axes[1][i].set_title(img_DSS[i][1].split('/')[3])
         crosshairs = axes[1][i].plot([center], [center],
             linestyle='none', marker='+',mew=2,ms=10,color='MediumVioletRed')
@@ -78,7 +99,7 @@ def display(target,save=''):
 
     for i in range(len(img_WISE)):
         img_width,radius,center = img_WISE[i][2]
-        axes[2][i].imshow(img_WISE[i][0], cmap=plt.cm.gray)
+        axes[2][i].imshow(img_WISE[i][0], cmap=plt.cm.bone)
         axes[2][i].set_title(img_WISE[i][1].split('/')[3])
         crosshairs = axes[2][i].plot([center], [center],
             linestyle='none', marker='+',mew=2,ms=10,color='MediumVioletRed')
@@ -89,9 +110,3 @@ def display(target,save=''):
             j.axis('off')
     plt.show()
 
-#with open('Results/RandSample_2000/good_candidates_from_w3.txt','rb') as f:
-#    data = f.readlines()
-#    for line in data[1:]:
-#        display(int(line[:-1]))
-
-display(273)

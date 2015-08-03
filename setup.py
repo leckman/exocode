@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='exocode',
-    version='1.1.1',
+    version='1.1.01',
     description='Automation of debris disk detection',
     classifiers=[
         'Programming Language :: Python :: 2.7',

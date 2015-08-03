@@ -4,7 +4,22 @@ irsa.ipac.caltech.edu/onlinehelp/Finderchart/#id=api
 http://irsa.ipac.caltech.edu/docs/program_interface/api_images.html
 Limited to 1000 sources per search
 
-Laura Eckman 12-06-2015
+Copyright (c) 2015, Laura Eckman
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 '''
 
 import csv
@@ -14,9 +29,9 @@ import urllib2
 
 ### EDITABLE ###############################################################################
 
-download_catalog = 'Catalogs/random_catalog_sample+1000.csv' #catalog of targets
-max_indices = int(download_catalog.split('+')[1][:-4]) #maximum index to download (set to all)
-data_container = 'FITS/RandSample-1000/' #containing folder for each target's image set
+download_catalog = 'Catalogs/tam_cat_sample.csv' #catalog of targets
+max_indices = 56 #maximum index to download (set to all)
+data_container = 'FITS/TAM/' #containing folder for each target's image set
 
 ############################################################################################
 

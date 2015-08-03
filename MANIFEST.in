@@ -1,2 +1,4 @@
 include README.rst
 include exoCode/Catalogs/*.csv
+include exoCode/FITS/TAM/*
+
