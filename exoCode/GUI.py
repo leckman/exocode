@@ -113,6 +113,9 @@ class Display(Frame):
         self.img_display = Button(self.csv_table.master,text='Display Next Index',command=self.data_display)
         self.download_button = Button(self.data,text='Click to Download',command=self.data_protocol)
 
+        self.label1 = Label(self.csv_table.master, text="Jump to Index:")
+        self.E1 = Entry(self.csv_table.master,width=5)
+
 
     def update_catalog(self):
         self.download_button.destroy()
@@ -182,10 +185,23 @@ class Display(Frame):
                 self.list_map[i].insert(END,str(row[i]))
         self.index+=1
 
-        self.img_display.pack(padx=5,pady=5)
+        self.img_display.pack(padx=5,pady=5,side=LEFT)
 
         self.current.set('\nDisplaying\nIndex '+str(self.index-1))
 	self.current_id.pack(padx=5,pady=5)
+
+
+        self.label1.pack(side=LEFT,padx=5,pady=5)
+        self.E1.pack(side=LEFT)
+        self.E1.bind('<Return>',self.input_index)
+
+    def input_index(self,event):
+        if int(self.E1.get()) in range(0,self.num_lines):
+            self.index = int(self.E1.get())
+            self.data_display()  
+
+
+
 
 
         
