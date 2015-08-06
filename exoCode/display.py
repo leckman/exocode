@@ -108,5 +108,12 @@ def display(target):
     for i in axes:
         for j in i:
             j.axis('off')
+    plt.title(target)
     plt.show()
+
+#good_from_w3 = [1,15,20,25,34,35,41,44,47,53,55]
+#for i in good_from_w3:
+#    display(i)
+
+    
 

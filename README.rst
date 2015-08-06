@@ -13,6 +13,8 @@ data to identify candidates that might have circumstellar debris disks.
 
   * You can also use one of your own, provided the format remains the same: ra,dec (degrees)
 
+  * Data included for tam_cat_sample.csv catalog under FITS/TAM/
+
 *  Use dataGen.py to run analysis on the downloaded images and output the results to a new .csv
 
 You should only have to touch the offset code at the top of each program (denoted 'EDITABLE')

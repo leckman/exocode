@@ -21,8 +21,6 @@ THE SOFTWARE.
 
 from skimage.filters import threshold_otsu
 
-
-
 def threshold(img):
     '''
     Args:

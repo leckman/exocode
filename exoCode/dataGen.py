@@ -49,4 +49,4 @@ with open(output_file,'wb') as f:
     writer = csv.writer(f)
     writer.writerows(full)
 
-print 'COMPLETE'
+    print 'COMPLETE'

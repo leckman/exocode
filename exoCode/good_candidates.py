@@ -45,7 +45,7 @@ error = 14
 
 candidates = []
 
-f = open('Results/RandSample_2000/ANALYSIS.csv','rb')
+f = open('Results/TAM/ANALYSIS.csv','rb')
 data = csv.reader(f)
 for row in data:
     if row[band] == 'w3' and row[error] == 'NULL':
@@ -63,7 +63,7 @@ for row in data:
             candidates.append(row[index])
         plt.close()
 
-with open('Results/RandSample_2000/good_candidates_from_w3.txt','wb') as k:
+with open('Results/TAM/good_candidates_from_w3.txt','wb') as k:
     k.write('Good Candidate Index Numbers')
     for target in candidates:
         k.write('\n'+target)

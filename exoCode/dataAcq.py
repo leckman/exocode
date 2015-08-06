@@ -43,15 +43,21 @@ with open(download_catalog,'rb') as csvfile: #rand cat
 #ra,dec (degree measurements as strings)  
 
 size = 1.0 #arcmin
+base = 'http://irsa.ipac.caltech.edu/applications/finderchart/servlet/api?'
+surveys = '&survey=DSS&survey=2MASS&survey=WISE'
+slicing = '&subsetsize='+str(size)
+orient = '&orientation=left' #default
+reproject = '&reproject=false' #default
+grid = '&grid=false' #default
+marker = '&marker=false' #default
 
-for i in range(max_indices):
+def target_download(i,data_container,table):
     folder = data_container+'index-'+str(i) #rand cat
     if not os.path.exists(folder):
         os.makedirs(folder)
     fileList = os.listdir(folder);
 
     if len(fileList)==0:
-        print i
         ra = float(table[i][0])
         dec = float(table[i][1])
         
@@ -62,14 +68,9 @@ for i in range(max_indices):
         position.close()
        
         #FinderChart url generation
-        base = 'http://irsa.ipac.caltech.edu/applications/finderchart/servlet/api?'
+
         locstr = 'locstr='+str(ra)+'+'+str(dec)+'+Equatorial+J2000'
-        surveys = '&survey=DSS&survey=2MASS&survey=WISE'
-        slicing = '&subsetsize='+str(size)
-        orient = '&orientation=left' #default
-        reproject = '&reproject=false' #default
-        grid = '&grid=false' #default
-        marker = '&marker=false' #default
+
         full_url = base+locstr+surveys+slicing+orient+reproject+grid+marker
 
         f = urllib2.urlopen(full_url)
