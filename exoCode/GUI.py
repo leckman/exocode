@@ -6,6 +6,10 @@ import os
 from dataAcq import target_download
 import csv
 from analysis_script import target_analysis
+import matplotlib
+matplotlib.use("TkAgg")
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.figure import Figure
 
 class Data(Frame):
     def __init__(self,parent):
@@ -181,7 +185,7 @@ Main Blob Displacement | Threshold Value | Percent of Image White | Error       
         self.E1.pack(side=LEFT)
         self.E1.bind('<Return>',self.input_index)
 
-        #self.images.pack(side=RIGHT,padx=5,pady=5)
+        self.images.pack(side=RIGHT,padx=5,pady=5)
 
     def input_index(self,event):
         if int(self.E1.get()) in range(0,self.num_lines):
@@ -190,10 +194,10 @@ Main Blob Displacement | Threshold Value | Percent of Image White | Error       
 
     def image_display(self):
         pass
-        #new = Tk()
-        #new.geometry('600x600')
-        #img_window= Display(new,self.index-1)
-        #new.mainloop()
+        new = Tk()
+        new.geometry('600x600')
+        img_window= Display(new,self.index-1)
+        new.mainloop()
 
 class Display(Frame):
 
