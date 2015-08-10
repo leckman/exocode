@@ -1,13 +1,13 @@
+#!/usr/bin/env python
+
 from Tkinter import *
 import tkFileDialog
 import os
-from time import sleep
 from dataAcq import target_download
 import csv
 from analysis_script import target_analysis
 
-
-class Display(Frame):
+class Data(Frame):
     def __init__(self,parent):
         Frame.__init__(self,parent)
         self.parent = parent
@@ -22,8 +22,6 @@ class Display(Frame):
                           'random_catalog_sample+1000.csv':'Results/RandSample_1000/',
                           'random_catalog_sample+2000.csv':'Results/RandSample_2000/',
                           'tycho_2mass_wise_XMATCH-POS.csv':'Results/Full_Cat/'}
-
-        
 
     def initUI(self):
 
@@ -44,7 +42,7 @@ class Display(Frame):
         self.check = Label(top,textvariable=self.dwnld,anchor=N,justify=LEFT,width=17)
         self.check.pack(side=LEFT,fill=BOTH)
         scrollbar = Scrollbar(bot)
-        self.listbox = Listbox(bot, yscrollcommand=scrollbar.set,height=13)
+        self.listbox = Listbox(bot, yscrollcommand=scrollbar.set,height=13,width=16)
         scrollbar.pack(side=RIGHT,fill=Y)
         self.listbox.pack(side=LEFT,fill=BOTH)
 
@@ -59,47 +57,26 @@ class Display(Frame):
         self.csv_table = Frame(csv_frame)
         self.csv_table.pack(fill=BOTH)
 
-        grid = Frame(self.csv_table)
+        grid = Frame(self.csv_table,width = 210)
         grid.pack(side=LEFT)
 
-        self.l0 = Listbox(grid, height=15)
-        self.l1 = Listbox(grid, height=15)
-        self.l2 = Listbox(grid, height=15)
-        self.l3 = Listbox(grid, height=15)
-        self.l4 = Listbox(grid, height=15)
-        self.l5 = Listbox(grid, height=15)
-        self.l6 = Listbox(grid, height=15)
-        self.l7 = Listbox(grid, height=15)
-        self.l8 = Listbox(grid, height=15)
-        self.l9 = Listbox(grid, height=15)
-
-        self.l0.pack(side=LEFT,fill=Y)
-        self.l1.pack(side=LEFT,fill=Y)
-        self.l2.pack(side=LEFT,fill=Y)
-        self.l3.pack(side=LEFT,fill=Y)
-        self.l4.pack(side=LEFT,fill=Y)
-        self.l5.pack(side=LEFT,fill=Y)
-        self.l6.pack(side=LEFT,fill=Y)
-        self.l7.pack(side=LEFT,fill=Y)
-        self.l8.pack(side=LEFT,fill=Y)
-        self.l9.pack(side=LEFT,fill=Y)
+        self.l0 = Listbox(grid, height=15,width=210,font=('FreeMono',10))
+        self.l0.pack(side=LEFT,fill=BOTH)
 
 
-
-        self.list_map = {0:self.l0,1:self.l1,2:self.l2,3:self.l3,
-                    4:self.l4,5:self.l5,6:self.l6,7:self.l7,
-                    8:self.l8,9:self.l9}
         list_titles = ['Image Address','Target Index','Target Right Ascension',
                        'Target Declination','Survey','Band',
                        'Number of Central Blobs','Main Blob Center',
                        'Main Blob Radius','Main Blob Displacement',
                        'Percent Outside Diffraction','Threshold Value',
                        'Percent of Image White','Validation','Error']
-        list_titles = [list_titles[0],list_titles[2],list_titles[3],
+        list_titles = [list_titles[0],
                        list_titles[6],list_titles[7],list_titles[8],
                        list_titles[9],list_titles[11],list_titles[12],list_titles[14]]
-        for i in range(len(list_titles)):
-            self.list_map[i].insert(END,str(list_titles[i]))
+
+        list_header = ('Image Address                                     | Number of Central Blobs | Main Blob Center | Main Blob Radius | \
+Main Blob Displacement | Threshold Value | Percent of Image White | Error        ')
+        self.l0.insert(END,list_header)
 
         close_button = Button(self,text='Close',command=self.parent.destroy)
         close_button.pack(side=RIGHT,padx=5,pady=5)
@@ -115,18 +92,19 @@ class Display(Frame):
 
         self.label1 = Label(self.csv_table.master, text="Jump to Index:")
         self.E1 = Entry(self.csv_table.master,width=5)
+        self.images = Button(self.csv_table.master,text='Show Target Images',command=self.image_display)
 
 
     def update_catalog(self):
         self.download_button.destroy()
         self.listbox.delete(0, END)
-        for key in self.list_map:
-            self.list_map[key].delete(1,END)
+        self.l0.delete(1,END)
         self.current.set('')
         self.index=0
         self.catalog_file = tkFileDialog.askopenfilename(initialdir='Catalogs/')
         self.data_container = self.image_data[self.catalog_file.split('/')[-1]]
         self.catalog.set('Catalog: '+self.data_container)
+
         with open(self.catalog_file,'rb') as f:
             self.num_lines = sum(1 for line in f)
         self.data_button = Button(self.csv_table.master,text='Display New Catalog Data',command=self.data_display)
@@ -134,13 +112,11 @@ class Display(Frame):
             if os.path.isdir(self.data_container+'index-'+str(i)+'/'):
                 self.listbox.insert(END,'index-'+str(i)+':   EXISTS')
                 if i == self.num_lines-1:
-                    print 'success check'
                     self.dwnld.set('\nDownload Complete!')
                     self.check.config(fg='green')
                     
                     self.data_button.pack(side=BOTTOM,fill=X)
             else:
-                print 'error check'
                 self.listbox.insert(END,'ERROR')
                 self.listbox.insert(END,'MISSING index-'+str(i))
                 
@@ -153,7 +129,6 @@ class Display(Frame):
 
 
     def data_protocol(self):
-        print 'in protocol'
         self.listbox.delete(0,END)
         self.dwnld.set('\nDownloading Now...')
         with open(self.catalog_file,'rb') as csvfile: #rand cat
@@ -172,17 +147,28 @@ class Display(Frame):
 
     def data_display(self):
         self.data_button.destroy()
-        print 'in display'
-        for key in self.list_map:
-            self.list_map[key].delete(1,END)
+        self.l0.delete(1,END)
         full = target_analysis(self.index,self.data_container)[1:]
         full.sort(key=lambda x: x[0])
+        
+        max_len = {0:49, 1:12, 2:22, 3:18, 4:6, 5:9, 6:23, 7:16,
+                   8:16, 9:22, 10:27, 11:15, 12:22, 13:10, 14:24}
 
+        for row in range(len(full)):
+            for column in range(len(full[row])):
+                full[row][column] = str(full[row][column]) + ' '*(max_len[column]-len(str(full[row][column])))
+
+        formatted = []
         for row in full:
-            row = [row[0],row[2],row[3],row[6],row[7],row[8],
-                   row[9],row[11],row[12],row[14]]
-            for i in range(len(row)):
-                self.list_map[i].insert(END,str(row[i]))
+            formatted.append(' | '.join([row[0],row[6],row[7],row[8],
+                   row[9],row[11],row[12],row[14]]))
+
+        for line in formatted:
+            self.l0.insert(END,line)
+
+
+
+
         self.index+=1
 
         self.img_display.pack(padx=5,pady=5,side=LEFT)
@@ -195,20 +181,37 @@ class Display(Frame):
         self.E1.pack(side=LEFT)
         self.E1.bind('<Return>',self.input_index)
 
+        #self.images.pack(side=RIGHT,padx=5,pady=5)
+
     def input_index(self,event):
         if int(self.E1.get()) in range(0,self.num_lines):
             self.index = int(self.E1.get())
             self.data_display()  
 
+    def image_display(self):
+        pass
+        #new = Tk()
+        #new.geometry('600x600')
+        #img_window= Display(new,self.index-1)
+        #new.mainloop()
 
+class Display(Frame):
 
+    def __init__(self,parent,index):
+        Frame.__init__(self,parent)
+        self.parent = parent
+        self.index = index
+    
+        self.initUI()
 
+    def initUI(self):
+        self.parent.title('Images for Index '+str(self.index))
 
         
 def main():
     root = Tk()
-    root.geometry('2000x350')
-    app = Display(root)
+    root.geometry('2000x360')
+    app = Data(root)
     root.mainloop()
 
 if __name__ == '__main__':
