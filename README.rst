@@ -9,6 +9,8 @@ This release (1.2.0) includes catalogs tycho_2mass_wise-XMATCH-POS.csv (full cat
 RandSample+2000.csv, and tam_cat_sample.csv. Pre-downloaded images from tam_cat_sample.csv are available
 for your convenience in FITS/Tam/. All other catalogs must first have images downloaded to be useful.
 
+See **CHANGES.txt** for more detailed updates with this release.
+
 Dependent on scikit-image (skimage), matplotlib, numpy, and astropy. 
 
 Lives at https://bitbucket.org/leckman/exoplanets/overview

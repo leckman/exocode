@@ -1,6 +1,7 @@
 include README.rst
 include LICENSE.txt
 include CHANGES.txt
+include DOCUMENTATION.odt
 include src/GUI.sh
 include src/Catalogs/*.csv
 include src/FITS/TAM/*/*
