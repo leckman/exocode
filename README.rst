@@ -5,11 +5,13 @@ from the Digitized Sky Survey (DSS), 2-micron All Sky Survey (2MASS), and
 Wide-field Infrared Survey Explorer (WISE) image catalogs. The goal is to use the 
 data to identify candidates that might have circumstellar debris disks. 
 
-This release includes catalogs tycho_2mass_wise-XMATCH-POS.csv (full catalog), RandSample+1000.csv,
+This release (1.2.0) includes catalogs tycho_2mass_wise-XMATCH-POS.csv (full catalog), RandSample+1000.csv,
 RandSample+2000.csv, and tam_cat_sample.csv. Pre-downloaded images from tam_cat_sample.csv are available
 for your convenience in FITS/Tam/. All other catalogs must first have images downloaded to be useful.
 
-Dependent on scikit-image (skimage), matplotlib, numpy, and pyfits. 
+Dependent on scikit-image (skimage), matplotlib, numpy, and astropy. 
+
+Lives at https://bitbucket.org/leckman/exoplanets/overview
 
 ---------------
 
@@ -25,15 +27,15 @@ Dependent on scikit-image (skimage), matplotlib, numpy, and pyfits.
 
 **Run Guidelines:**
 
-Command line: (in exoCode containing directory)
+Command line: (in containing directory)
 
-    cd exoCode
+    cd src
 
     python dataGen.py
 
 In python:
 
-    from exoCode import dataGen
+    import src.dataGen
 
 **New Graphical Interface**
 
@@ -43,9 +45,9 @@ In python:
 
 * follow prompts to gather data, flip through indices, display images
 
-* can be run using $ ./GUI.sh in containing directory
+* can be run using $ ./GUI.sh in src directory
 
   * alternatively, use $ python GUI.py
 
 
-**`Full Documentation<https://docs.google.com/document/d/1-QtbvASw43S03IHlEPk4qlstk8aNtAmu8uT2uNk6otY/edit?usp=sharing>`_**
+**Full Documentation:** https://docs.google.com/document/d/1-QtbvASw43S03IHlEPk4qlstk8aNtAmu8uT2uNk6otY/edit?usp=sharing 

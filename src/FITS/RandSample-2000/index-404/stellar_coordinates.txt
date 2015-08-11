@@ -1,0 +1,3 @@
+Target is row 404 of file random_catalog_sample+1000.csv
+ra 39.935772
+dec 70.120052

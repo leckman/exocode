@@ -1,0 +1,3 @@
+Target is row 1372 of file random_catalog_sample+1000.csv
+ra 145.706517
+dec -4.905051
