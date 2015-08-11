@@ -1,3 +1,0 @@
-Target is row 1296 of file random_catalog_sample+1000.csv
-ra 208.096094
-dec -5.236017

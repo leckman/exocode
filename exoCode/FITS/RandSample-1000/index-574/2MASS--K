@@ -1,1481 +1,0 @@
-SIMPLE  =                    T                                                  BITPIX  =                  -32                                                  NAXIS   =                    2   / # of Axes                                    NAXIS1  =                   61                                                  NAXIS2  =                   61                                                  BLOCKED =                    T / TAPE MAY BE BLOCKED IN MULTIPLES OF 2880       EXTEND  =                    T / TAPE MAY HAVE STANDARD FITS EXTENSIONS         ORDATE  = '000422  '             / Observation Ref Date (yymmdd)                DAYNUM  = '1149    '             / Observation Day Num                          FN_PRFX = 'k1149035'             / .rdo and .par filename prefix                TYPE    = 'sci     '             / Scan type: dar flt sci cal tst               SCANNO  =                   35   / Scan Number                                  SCANDIR = 's       '             / Scan Direction: n, s, -                      COMMENT                                  (OV)                                   STRIP_ID=               326063   / Strip ID (OV)                                POSITNID= 's601230 '             / Position ID (OV)                             ORIGIN  = '2MASS   '             / 2MASS Survey Camera                          CTYPE1  = 'RA---SIN'             / Orthographic Projection                      CTYPE2  = 'DEC--SIN'             / Orthographic Projection                      CRPIX1  = -8.850000000000000E+01 /   Axis 1 Reference Pixel                     CRPIX2  = -1.150000000000000E+01 /   Axis 2 Reference Pixel                     CRVAL1  =          187.8321303 /   RA  at Frame Center, J2000 (deg)             CRVAL2  =         -62.68606998 /   Dec at Frame Center, J2000 (deg)             CROTA2  =      -0.006215327742 /   Image Twist +AXIS2 W of N, J2000 (deg)       CDELT1  =     -0.0002777777845 /   Axis 1 Pixel Size (degs)                     CDELT2  =      0.0002777777845 /   Axis 2 Pixel Size (degs)                     USXREF  =               -256.5 /   U-scan X at Grid (0,0)                       USYREF  =              -10876. /   U-scan Y at Grid (0,0)                       SKYVAL  =          550.7172852 /   GFIND Sky Estimate                           SKYSIG  =          1.897460938 /   Grid  Noise Estimate                         MAGZP   =              19.9703 / Calibrated zero point from CALMAN              CALID   = ' y lf 0 Dec 22 2001'/ Calibration descriptors from CALMAN            SEESH   =               0.9800 / Seeing shape parameter from SEEMAN             DXFS    =         0.3048993647 /   Cross-scan Frame Step (arcsec)               DYFS    =         -82.23175812 /      In-scan Frame Step (arcsec)               PIXNAM  = 'nl.pixphot - v 011003s'                                              QT0227  =           548.670166 /   2.27 Percentile                              QT0668  =          549.3869629 /   6.68 Percentile                              QT1586  =          550.1459351 /  15.86 Percentile                              QT3085  =          550.9962769 /  30.85 Percentile                              QT5000  =           552.043396 /  50.00 Percentile                              QT6914  =          553.6148682 /  69.14 Percentile                              QT8413  =          557.0006714 /  84.13 Percentile                              QT9331  =            566.81604 /  93.31 Percentile                              QT9772  =           602.916626 /  97.72 Percentile                              BASE    =                    6   / Pixel Dwell (microsec)                       WAVEF_P = '2masss.scn'           / Secondary waveform data file                 TIMER0  =                   52   / Read1 time (millisecs)                       TIMER1  =                 1298   / Read2-Read1 time (millisecs)                 TIMER2  =                   51   / Secondary settling time (millisecs)          ICSVERSN= '000405  '             / ICS script pgm Version (yymmdd)              SCHEDVER= '990325  '             / Scheduler pgm Version (yymmdd)               SCRIPTFN= 'survey.sct'           / Script template filename                     SCRPTVER= '000403  '             / Script template filename Versn (yymmdd)      UT_OFF1 =   7.445255474453E-01   / UT Offset (IC),SOS to frm#1 Cntr (secs)      XS_OFF1 =   1.280000000000E+00   / X-Scan Offset (IN),SOS to f#1 RA Cntr (ASec) IS_OFF1 =  -3.653700000000E+02   / In-Scan Offset (IN),SOS to f#1 Dec Cntr(ASec)XS_OFF2 =   1.060000000000E+00   / X-Scan Offset(IN),EOS to End Frm RA Ctr(ASec)IS_OFF2 =   1.236100000000E+02   / In-Scan Offset(IN),EOS to End Frm Dec Ctr(AS)FOCUS   =                  973   / Focus Setting                                NUMFRMS =                  274   / Total Number of Frames in this Scan          SKIPRDOS=                    0   / Total Number of SOS junk RDOs skipped (IC)   TELNAME = 'CTIO    '             / Telescope -30.165/+70.815 lat/lon degs       FILTER  = 'k       '             / Band: j, h, k                                UT_DATE = '000422  '             / UT Date of Frame (IC) (yymmdd)               UT      = '01:14:50.36'          / Time of Frame (IC) (sxgsml)                  AMASS_FC=       1.27230763E+00   / Airmass (aprox) at this Frame (IC) (unitless)GRP2_SOS= 'SOS     '             / Bgn Group#2 .par params at SOS               DATE_SOS= '000422  '             / Date at SOS  (yymmdd)                        EQUINOX =   2.000000000000E+03   / Equinox at SOS                               AM_SOS  =       1.24000001E+00   / Airmass at SOS (unitless)                    ZD_SOS  =       3.60000000E+01   / Zenith Distance at SOS (degs)                HA_SOS  = '-02:01:13.00'         / Hour Angle at SOS (sxgsml)                   UT_SOS  = '01:11:42.00'          / Scan Reference UT  (SOS) (sxgsml)            ST_SOS  = '10:30:06.00'          / Sidereal time at SOS  (sxgsml)               RA_SOS  = '12:31:20.14'          / Scan Reference RA at SOS ,epoch 2000 (sxgsml)DEC_SOS = '-59:42:15.9'          / Scan Reference Dec at SOS,epoch 2000 (sxgsml)WSPD_SOS=                    0   / Wind Speed at SOS, see WARNING below         WDIR_SOS=                    0   / Wind Direction at SOS, see WARNING below     HUM_SOS =                   26   / Humidity at SOS, 0-100%                      SEE_SOS =       0.00000000E+00   / Seeing at SOS, see WARNING below             BAR_SOS =       3.00000000E+01   / Barometer at SOS (inches of Hg)              AIRT_SOS=       1.60000000E+01   / Air temperature at SOS, degs Celsius         TELT_SOS=       1.41000004E+01   / Telescope Temp at SOS, degs Celsius          ARYT_SOS=      -1.90000000E+02   / Temperature of array, see WARNING below      GRP2_EOS= 'EOS     '             / Bgn Group#2 .par params at EOS               DATE_EOS= '000422  '             / Date at EOS (yymmdd)                         AM_EOS  =       1.30999994E+00   / Airmass at EOS (unitless)                    ZD_EOS  =       4.00999985E+01   / Zenith Distance at EOS (degs)                HA_EOS  = '-01:54:25.00'         / Hour Angle at EOS (sxgsml)                   UT_EOS  = '01:18:30.00'          / UT  at EOS (sxgsml)                          ST_EOS  = '10:36:55.00'          / ST  at EOS (sxgsml)                          RA_EOS  = '12:31:20.44'          / RA  at EOS, epoch 2000 (sxgsml)              DEC_EOS = '-66:05:28.6'          / Dec at EOS, epoch 2000 (sxgsml)              WSPD_EOS=                    0   / Wind Speed at SOS, see WARNING below         WDIR_EOS=                    0   / Wind Direction at EOS, see WARNING below     HUM_EOS =                   25   / Humidity at EOS, 0-100%                      SEE_EOS =       0.00000000E+00   / Seeing at EOS, see WARNING below             BAR_EOS =       3.00000000E+01   / Barometer at EOS (inches of Hg)              AIRT_EOS=       1.60000000E+01   / Air temperature at EOS, degs Celsius         TELT_EOS=       1.41000004E+01   / Telescope Temp at EOS, degs Celsius          ARYT_EOS=      -1.90000000E+02   / Temperature of array, see WARNING below      COMMENT *** WARNING *** indicated parameter not measured, dummy only            COMMENT src keys: (IK)=IPAC Konstant; (IC)=IPAC cmptd; (IN)=IPAC namelist       COMMENT           (OV)=Obsrvtry .par file variable                              COMMENT   Group 2 parms are ALL from the Obs .par file                          COMMENT   non-Group 2 parms w/o (xx) are usually fm Obs                         RF_NLID = 'norot sat s 980730'   / Rdframe namelist version id                  HISTORY * Rdframe version= 980423     jhw.  Bgn Xeq = 01-12-21 10:00:07         HISTORY * DFlat  vsn1.96 981203  Run on 12/21/01 at  9:57:35                    HISTORY > Image Created by pixphot - Version 010925p                            HISTORY >         Gene Kopan  IPAC/ Caltech                                     END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             D
-?¤D
-g³D
-ºHD
-ö‰D
-ïìDD
-ê8D
->óD	ãÿD	ç7D	ûKD
-ìD
-muD
-ÃD
-½ÄD
-ŒþD
-‘D
-¬-D
-©D
-ÔD	Ì`D	ÀD	ñ­D
-/[D
-¶ŽDFCD`D
-l–D	ðåD	ÀD	ºtD	º D	ÐD	Ø[D	¨hD	… D	q§D	hKD	‰¬D	¹D	ÙD	ßD	Ñ³D	­kD	€èD	 jD
-vD
-+D
-D	ÖŽD	Í=D	¿ÿD	£]D	¹¢D	ûòD
-WD
-~D	ûÖD
-žD
-&tD
-$ªD
-¨ÅD¸DÍDÄDPbDd–D
-¤D	õ/D	¦ÐD	¢^D	²+D	äûD
--D
-f¼D
-YüD
-(9D
-(³D
-ID
-4tD	áØD	¥†D	³±D	ÉÂD	ÀþD	ÛuD
-3D
-+žD
-iD
-šD
-DD
-.ôD
-(»D
-ÔD	¾…D	}D	GD	°ñD	˜ÌD	€íD	˜D	ÄÌD	ÒÃD	®êD	`4D	;pD	‚nD	î©D
-`D	ø¾D	ÈD	ÅãD	ÍyD	¯D	¸ÛD
-1D
-N£D
-m½D
-MÈD
-*D
-BID
-d¹DpDd£D^ÉDcþD=µDÚ`D
-HªD	‹ñD	PaD	6÷D	JED	™–D	âD	ôßD	à“D	áÃD
-¾D
-6vD
-‡D	©¯D	RD	½/D	Ã£D	“D	„¬D	—|D	Ò]D
-|D
-Y#D
-mÞD
-l0D
-qD
-FøD	çvD	Å
-D	üÊD
-oD	ÉCD	XD	vcD	‰ÿD	¦BD	“-D	?ØD	&°D	¨D	ðŽD
-”D
-	ŽD	Ñ¸D	Ý‹D
-"_D
-ÇD	ð‘D
-…D
-\D
-ŸD
-nID
-LD
-D
-oÏDëD¿©D´=DÄBDÛïD¤jD
-[nD	oÒD	þDéÏD	qD	cWD	À—D	Ò­D	¸ôD	¶pD	ß¾D	ì D	°BD	tâD	“zD	áD	Ú D	ŸED	–§D	®×D	á*D
-<ÙD
-ÏQD}oDÀHDd?D
-»ÃD
-E4D
-3–D
-WD
-#~D	ÂßD	—D	|D	õD	’	D	™ÅD	vD	pßD	Æ(D	ã–D	ã8D	úD	ÝÂD	ýäD
-lÖD
-„ZD
-S!D
-1[D
-G†D
-nÙD
-DgD	æAD	àD
-)|DÌÍDÓvDÕD<øDD—jD
-vD	€ÝD	5ýD	ÍD	7ÞD	„eD	Ä‚D	ì¥D	Þ^D	µxD	›9D	ŽºD	k)D	fD	±áD	û‰D	òND	ïºD
-=RD
-qzD
-W(D
-h²Dˆ˜D¡·D¬Dv«DŠiD
-~ÕD
-GîD
-BÿD
- ÒD	àÈD	Ï”D	¹¿D	¨<D	ƒYD	 'D	zÏD	vQD	ïD	}¡D	‡$D	¼D	ËƒD	ýXD
-`RD
-¢üD
-¤£D
-UAD
-ÈD	òxD	çgD	Í9D	ÏïD	ÐãD
-º°D¡~DÙUDÛ
-DXiDûD
-KÂD	ƒD	X±D	KD	xJD	«D	ìnD
-2(D
-!D	íèD	¾”D	µÇD	¶D	¿fD	áöD
-D
-MŸD
-–~D
-ù‹DÉD
-¦ßD
-n,DÚ¦D…–D¸DDSADðÌD
-uaD
-—D	÷èD	åÚD	ðÚD	ó“D	ä¬D	Ì	D	–D	h2D	FýD	.LD	+ŠD	AøD	Œ¬D	ÐD	ÝñD	ø-D
-$jD
-^ŠD
-‘8D
-L±D	ÕRD	²œD	½œD	ìnD
-	±D	Ï"D
-TD
-œ
-D‚¿D™óD†-DHÎD
-D	|D	pÏD	j[D	wD	¡ŽD
-mD
-eÍD
-h¼D
-b2D
-A›D
-(YD
-"øD
-¥D
-–D
-]¼D
-êíD'³D6D
-ßçD
-YºD
-–D’DÅDˆ'DàCDrVD
-QñD	ðŽD	ÕyD	ò·D
-ÏD
-ÍD	õ|D	ÍD	¬èD	zcD	> D	!)D	BD	¨ÏD
-!~D
-?D
-'D	ã™D	ÝòD	ùiD
-JžD
-R}D
-©D	Þ§D	ÅÄD	û¨D
-ýD	âD	ñ«D
-ðD
-;D
-‚wD
-­‰D
-jkD	ÌD	gD	pöD	têD	iD	ŒjD	ñpD
-j)D
-„D
-~?D
-f³D
-K×D
-5]D
- ¸D
-0D
-q»D
-úD
-î¯D
-íD
-*D	ÐÈD	¤&D
-	,D
-¯SD9™DBLD
-±GD
-%!D	÷D	í‹D
-#¬D
-ˆ:D
-ŽœD
-PuD
-+èD
-D	xnD	3çD	F•D	 èD
-'D
-¤œD
-~D	õ©D	°ID	µ–D	÷^D
-I¾D
-W+D
-;çD	ÿgD	Ø¾D
-RD
- £D	ÝD	ÜD	Ï%D	êWD
-9D
-*©D
-	ÈD	¡D	aXD	‡õD	•QD	n¤D	uŒD	Ð;D
-RD
-dD
-%”D
-ÙD
-+“D
-$VD
-êD	åáD
-ÙD
-d»D
-=õD	ìÞD	À¨D	’FD	c×D	‰ÑD	ß³D
-VòD
-•XD
-I6D	ú&D	ëKD	ï)D
-'D
-u–D
-ZD
-eD
-6D	åD	nD	CëD	z¼D	ÇD
-)WD
-˜FD
-ZBD	ÑòD	ŸiD	ÈjD
- ”D
-<üD
-°D
-	OD
-
-•D
-0 D
-PD
- D	ÊKD	­ZD	ŒtD	©€D	òÒD
-'jD
-ÿD	±ÑD	v`D	¨ÄD	»ìD	”¾D	 ãD	ÇÔD
- D
-.D
-¸D	ëgD
-!D
-æD	ølD	ÊòD	ß‡D
-“D
-¢D
-GD
-lD	Þ¸D	…•D	x¿D	¶mD
-J"D
-»†D
-…D
-—D	ÀŸD	¦ØD	â.D
- D	Á½D	„>D	‘˜D	®kD	‹(D	D	œAD	D	º‹D
-FD
-ÈD	´ºD	¤kD	ÚD
-!D
-ºD	öqD	íªD
-'­D
-“‚D
-TD
-ÇD	ŸED	“°D	zéD	¦ûD
-8ŠD
-‰åD
-`¼D	ñïD	¶(D	ÚD	øHD	ÒxD	È&D	ÎxD	çD
-iD
-qD	úÛD	ûšD
-{D	çGD	½D	Û2D
-ÅD
-dD
-¦”D
-»rD
-ZD	À“D	s¶D	¬ýD
-f D
-ï“D
-ÄÌD
-~D	ŠiD	^óD	‰„D	«ÜD	œÑD	…&D	“_D	 YD	­D	ßD	Ï£D	ðD	‡ÝD	³D	»_D	«(D	­eD	è@D
-7œD
->ŠD
-D
-D
-K‚D
-ÉïD
-±ÒD
-nD	œ D	¯ D	¤ðD
- D
-ÝD8:D
-ÈD
-LD
-ŸåD
-]ÖD	ï$D	¨DD	žID	­dD	¿™D	×?D	îVD	úßD
-JD
-ˆD	¸ÈD	•D	È­D
-iD
-o@D
-¼ÚD
-ÞZD
-y\D	ß8D	¢˜D	òdD
-xFD
-°»D
-xuD	ìD	ˆèD	y¼D	nÉD	˜D	–D	†°D	‰šD	’ÉD	Ñ*D
-"*D
- µD
- D	ôYD	×PD	µD	£6D	®.D	í%D
-I­D
-U-D
-3ND
-*D
-}kD
-ÿ}DÌD
-£uD
-E8D
-!D
-3fD
-ì¡D0§DƒîD
-5DÅÊD„¨D
-Æ2D	ËD	c\D	jýD	nXD	b>D	e	D	{ãD	®yD	å
-D	ÑD	˜D	~FD	¸¢D
-EÁD
-ÀhD
-ÍD
-¯ D
-^D	ó¹D	ÞD
-$:D
-cID
-d<D
-0D	âwD	ÏyD	ÔfD	Õ‰D	×/D	Â¦D	¥D	`µD	’øD	ôD
-GÓD
-OD
-qD
-˜mD
-a&D	ÝöD	Š4D	…ôD	¼÷D
-6qD
-n˜D
-KzD
-CÙD
-¦&D6†D¼D‹¡D;iD
-ÏœDá¥DÇ2D]ÎDùD€BDÑ¼DY€D D	ÏLD	cD	zšD	h®D	%[D	ÒD	%¡D	K D	w]D	…ÁD	’D	ÉìD
-^D”LDYcD¥hD
-Ÿ´D
-%|D	ÜBD	ÊÔD	÷yD
-4YD
-TD
->ÒD
- eD	ð¼D	ú.D	ïD	ìD	ÎâD	’BD	w!D	 ÜD	÷]D
-+D
-N…D
-¾ÎD…D
-æD
-)D	ˆ•D	`QD	piD	í’D
-m×D
-^íD
-AüD
-›bD*ÜD—çDÍDcD"îDD^~DDÑD*ˆDÑ[D„MD½D	Ö9D	t4D	»D	‰zD	0-Dô(D	©D	)CD	SòD	u6D	´‰D
-rƒDÆ,Dp²D ËDZD
-’:D	ÏõD	Ÿ‚D	›6D	Î˜D
-7½D
-…àD
-mòD
- vD	É¹D	í^D	óD	ºD	l‰D	RBD	€1D	ÉÈD	û:D	ñyD
-D
-¨fD‰D
-Ë±D
-çD	†°D	cVD	NpD	Š:D
-tD
-¾D
-|D
-a%D
-ÍDdD)6D
-È²D˜bD˜UDVÞDT8DõìD¥ïD¬_Dn’D 0D	ÉD	aôD	t\D	œD	g$D	$-D	$ýD	AZD	ZîD	|šD	à(D0šD%xDnMD5ðDfJD
-wuD	¥jD	véD	}èD	ÔD
-‰ÈD
-ùD
-ŸµD	é2D	­ìD	ì©D
-|D	º¡D	EßD	#üD	xGD	ÓÆD	÷MD	ãD	Þ‘D
-'šD
-TàD
-	ÇD	”ÀD	SD	Y‘D	`¬D	ƒ•D	½€D	»­D	¿D
-	’D
-P‰D
-RND
-,¼D
-›D˜Dà·D¡!D`DÃ"D]DXŠD¸«DÖD
-¥D	œÞD	z‰D	™²D	©õD	zñD	\oD	ZOD	kRD	™”D
-'ôDÄ"Dø Dœ(DZÃDÁ1D
-‹D	ÊÆD	`ÎD	RFD	ÂD
-£*D8éD
-ÒÆD
-D	ß•D
-D
-ÄD	ÔD	yD	J3D	wÛD	º3D	âZD	êD	ÍD	ÓD	ÚÍD	žŸD	UFD	:øD	>/D	\éD	¤>D	ÊD	²D	ª†D	Ö]D	ïôD	ÂÑD	‚D	tD
-ªiDiGD¬DòyDgDkDf…DðôD
-².D
-’MD
-pÊD
-	YD	Í¬D	ÕûD	Ô<D	®_D	”]D	­âD	ÈáD
-(uDcD]nD±–DR¸D D
-wÿD	ÕD	S„D	LÅD	¹’D
-nD
-ùKD
-ÑÊD
-ZMD
-6ÁD
-TÕD
-/àD	ÆýD	~èD	h	D	…!D	¶ãD	öD
-,ÅD
-2pD
-.D
-ÊD	ÕàD	´D	¤ŠD	oD	X¦D	¯3D
-ÓD
-3#D
-÷D	ÐD	œ¬D	’ºD	D	qD
-PD
-ÜDí,D¨·DÌrD)eDYD
-É®D
-€D!DsÂD
-à{D
-eD	îœD
-#;D
-#D	ùÖD	ü¤D	èÀD	»ÌD
-£óDùD>D1¨D
-šD
-"èD	®ŒD	{mD	§&D	ô´D
-iXD
-ÂkD
-©nD
-iŒD
-`dD
-z=D
-6ëD	—­D	:ED	OED	—­D	Ð$D
-(ÊD
-¨D
-õWD
-ôZD
-ž3D
-.^D
-]D
-ùD	·`D	zûD	Â2D
-M¡D
-¢ŒD
-k‰D	ÀDD	L£D	¡D	ëöD	ú D
-+D
-4àD
-.Dg§DD •DA;D
-v3D
-súD#{D|D
-âøD
-D	ÚÂD
- pD
-SYD
-CâD
--}D	ã"D	ÁD
-|&DÁ0DæÐD¶D
-€_D
-°D	Ä©D	ÐmD	õ½D
-¼D
-vZD
-â–D
-Á)D
-ucD
-AD
-!D	æÕD	€­D	GÜD	qAD	¹~D	×`D
-
-òD
-£D)D/æD
-Û%D
-T¥D
-­D	ý+D
-D
-;D
-,×D
-3D
-J>D
-!ýD	ŠæD	<>D	°D
-\7D
-§ÞD	õUD	ïoD
-RD
-¶«D0-D/ED
-«]D
-³D
- ±D
-i—D
-r4D
-D	¿9D	Ä5D	ñD
-zD
-,D
-0üD
-"D
-	HD
-Ê†D#˜DB©D<æD
-˜ìD
-;êD
-)¢D
-5VD
-'ÕD	ÿD
-cÊD
-îLD
-ëøD
-¦èD
-=~D	ØÿD	°âD	«ÎD	¶‹D	ÔuD	ìžD	ÙéD	Ã÷D
-³D
-†rD
-ÙD
-ÐÚD
-ƒ«D
-,åD
-5uD1&DDw*D
-2÷D	´TD	¸ÅD	—4D	šXD
-/D
-Ö!DÆD	´oD	ÿrD
-hÅD
-ñÛD“D
-™‹D
-“D	®¡D	©½D	¶áD	ºûD	©}D	¢ŠD	Ò¤D	îÁD	ê"D	ÿºD
-aD	ÿD
-
-õD
-’WD˜AD´ÜD
-èD
-xÏD
-c`D
-g9D
-cmD
-W‡D
-GŠD
-‹ïD
-×)D
-Ò/D
-ÃSD
-D
-CŸD
-ºD
-ÂD
-dD
-4D
-®D	ìdD	ËâD	ß˜D
-! D
-h¦D
-Î’DjD
-ÆˆD
-ÊOD»µD”•D;D
-µ7D	Á½D	Þ`D
-aD
-B)D
-ä¯DW D"D	µõD
-C£D
-úD„kDLõD
-‰öD	ä
-D	…ÂD	}0D	ŠÉD	¦ûD	§¦D	‘ŒD	ÁÄD	ÿðD
-ŽD
-(ÚD
- hD	ó	D
-ÎD
-4 D
-—|D
-½5D
-‹µD
-_’D
-w‘D
-y™D
-s,D
-ŒøD
-ÊÉD»D
-öÏD
-½ºD
-Á`D
-Æ”D
-¯5D
- _D
-];D
-@D
-D
-áD
-TD
-½D
-(½D
-fD
-=ŸD=DnD¼AD?>Dø©Dñ DÀlDD‚D
-&>D
-zD
-GÝD
-ÃúD¡íDá›D
-ï\D	ÔgD
-7ÂD
-µ­D$&DsD
-uD	ôQD	²QD	°ÓD	±zD	°ëD	—‘D	hD	€ND	áŠD
-?ÖD
-^D
-]D
-}½D
-µ¦D
-s3D
-DD
-`HD
-\“D
-’ŸD
-¶½D
-Ó£D
-çÑD2DrlD²´DuSDƒD
-òqD
-Í¬D
-®…D
-´D
-xÙD
-gD	ôýD
-öD
-00D
-E[D
-^ÓD
-\ÒD
-ƒnDŒDšTDÅD1DÇâDã~DUlD
-ëýD
-D	áóD
-3qD
-Ü×DÆ„DëjD
-Î¸D	ùzD
-D
- –D
-6FD
-DD
-ÀD	ñóD	ÞD	ëD	áÓD	¤UD	cåD	0RD	rD	ÁíD
-ÿD
-iD
-÷7DÖ7DD6ñD
-OD
-%ÄD
-pTD
-Æ‚D
-öÕDBDž[Dà]D[oDÐçD’ÀDMD‰ODaD
-³xD
-D
-mlD	ü°D	ÇŽD	Û°D	ùD
-öD
->!D
-vÉD
- ’D1DD¤¦DWD
-fñD
-˜|D
-ö«D
-¿SD
-G&D	ìâD	ÎöD
-*ŸD
-¨iDhD
-ónD
-TõD	ÜKD	î»D	¿'D	ÈÃD	âD	ÞZD	ñõD	ÑÚD	çYD
-äD	úïD	³…D	y«D	t˜D	é>D
-3zD
-ˆÊDND¨.DwøD‚¥DRD
-”ïD
-¾¢D
-÷æDùDšOD‘ùDÉŠDr÷DÝ…DP„DRD©‡DÒDBÄD
-ÃrD
-OžD	åD	½ìD	é½D
-xD
-ŒD
-,*D
-KgD
-DD
-S–D
-6üD	ÊD	º:D
-FD
-6D
-)lD
-ÿD	ÙÐD	ÔD
-$úD
-O™D
-D	ÌmD	ÓYD	€D	ËnD	ï¦D	ÚdD	ËÞD
-õD	ü[D	½{D	Ã|D	ÿÌD
-ùD
-ïD	á@D	ÂûD	ýãD
-7D
-y”D"ND¯ŽD=£DÈ
-D]DMDD•D?)DKûD:BD³|DÁlD=…D"˜rD ãKD%¶Do-Du®DdDÂD
-i®D
-!×D
-@aD
-íèD};D)D
-gYD
-/ÄD
-åD	ù6D	‚,D	mØD	“D	ÛÍD	îðD	ØD	®ˆD	w¨D	—D	ñD	èD	z¶D	ED	ÏD	l¹D	ÇYD
-tD	þ$D	Ü+D
-‰D	ÞùD	¤¬D	¯ÄD	Õ¢D
-ÙD
-6}D
-ÔD	õ<D
-¸D
-FD
-K]D
-–DßoD”DÛCDÚ1D£³Dt¯D‚¡DÐ¶D¦qD’&D0;ôDY§hD€ÕcD€}¶DKxuDIôD½D¥D‡UD
-ãZD
-¥²D»DO—DSiDIaD
-Ã½D
-=ìD
-GaD
-+ôD	ßfD	 uD	«~D	Ï´D	µ…D	‚D	UìD	=÷D	_D	’BD	zšD	..D	#¬D	ØD	|SD	«D	¿D	òD
-„D
-WD	ÞöD	–|D	˜D	³ÚD	ãD
-'¹D
-5sD
-J¢D
-d—D
-GºD
-T6DDü’D#©DâDôÑD‘JD=KD¬üD¡¼DÅD ¸¤DpÅ¿D½sÜDüoãDú|¼D¨¹D@,’DC{DÄDD'D
-úuD
-éXDhDÉDà DÔûD*ÑD
-š`D
-mD
-rrD
-SiD	þD	±…D	º?D	ŸµD	mÇD	UD	]iD	d!D	PÙD	1›D	šD	.D	¯D	‰.D	‹!D	˜)D	âpD
-kD
- íD	ÿñD	¬1D	}‘D	„cD	»âD
-‹D
-TD
-¥0D
-¢¨D
-BDD
-O¢D
-Ì½DÝ3Dõ1DÚ§D/DIàDDÓ>DOD&=D,Ü+D™tºEbxED+DEBDø‘”Dh¤DÙ©Di®Dh¹D&JD$íD†DB%D×çDFDm/D#D
-¯
-D
-¨,D
-¥DD
-*D	‰™D	¢æD	´D	«D	¢oD	ª“D	©qD	e£D	)áD	:D	OD	œD	˜4D	vkD	’D	ÇÁD	îÆD
-D
-#LD	ó D	¨’D	‡‹D	òâD
-_
-D
-õDG¦D
-ÜÔD
-7dD
-=œD
-‘'D
-®¡D
-–JD
-•’D
-±ÏD
-ØûD.ÀD3cDÍÝD@”D+ÿD”…EËECCßE:àæDíAuDh9WDcÅDtÉD´GDi¹DdEDu­Dj‰DogD,‘D
-ü"D
-ç9D
-Ä(D
-ÎeD
-­üD	à§D	£fD	©¦D	ìD
-7˜D
-SRD
- ¡D	î¾D	–TD	QŠD	<™D	4D	™D	‘QD	wÏD	š¯D	©…D	Í8D
-„D
-2LD
-¹D	à/D	³D	û!D
-•NDi)DÁ$D
-÷ÝD
-–D
-@(D
-Œ5D
-/ÞD	šD	‹ÊD	æóD
-œD¬?DXÕD°DûMDMD^h D´	NDöÒD÷?¥D¬1tDI_íDõ°DE¿Ds©D:ÜDÉDiD
-µcD
-‹²D
-N“D
-ÍD
-4>D
-N¥D
-‹fD
-¬¦D
-‹D	Ø%D	àvD
-yâDoãDµ…D
-Ã¸D	ØD	‰…D	|D	^SD	AÄD	ZÎD	8`D	mÊD	®¡D	¸#D	Ô1D
-*D
-¨D	àAD	Â¹D	ªzD	Ñ,D
-0Dl–D‡D
-±MD
--D
-$zD
-UTD	ý¯D	MD	vtD	¹ÄD
-ÌFDâ5DKŠD.›D”DªD%ëšDLÔ‰DmþõDˆlDY±D%bðDA9D‰ADÉ«D
-ÉØD
-ŸsD
-Š D
-N/D
-/!D	óÿD	˜áD	ŠƒD	ÐD
-!´D
-pXD
-êD	±üD
--DôD¸MD:JD|·D	®¨D	OAD	nED	`®D	BSD	¯D	9D	‚ÁD	èKD
-D
-VD
-=ØD
-#D	ÜjD	»ÂD	½D	»íD
-U]D$DD
-s,D	ó D	ã‡D	êèD	Í\D	¥FD	­£D
-¬D3YDI^DÖÛD„vDF$D.D±éDíD #D$µáDÈLDþDedD@ùD2YD
-¿D
-q,D
-iD
-14D	ôrD	º1D	xüD	rÂD	ŒUD	óD
-bJD
-SXD
-D
-@€D
-áÌDqND(WDÌD	)D	]D	:D	WD	OˆD	ÇD	v¦D	®åD
-&^D
-iTD
-\GD
-n÷D
-hÃD
-IþD
-.=D
-#D	ôPD
-#D
-ÍfD)‚D
-·aD
--D	õ•D	ÏD	·D	»DD	Ý“D
-D
-ŸD1\DûáD¯úD¦	D¨oD>ãD›ŽDyHD¥\DD(ÍD€þD_MD
-ÏQD
-{äD
-~ÓD
-D
-:×D	â.D	›þD	wËD	lŸD	o^D	ÚÁD
-mžD
-ƒD
-=´D
-OD
-7sD
-þêDVD
-½òD	„D	\D	1ùD	NgD	I@D	D	ÕD	´D
- ­D
-/D
-qÕD
-ªrDÐDI“DDD
-’­D
-
-<D	íÝD
-›ÃDF²DzD
-iÅD
-+˜D
- 4D	ÍöD	É-D	å“D	é(D
-ÿD
-ªmD ÀDMôDæPDJÔDX¸Dº´Dô-DüDWDtÊDND
-Å«D
-{0D
-}¼D
-³D
-¯ÝD
-IcD	ærD	‡D	SxD	bD	qND	Æ[D
-[D
-sâD
-ÖD	çZD
- ‚D
-9œD
-\vD
-1öD	ÞD	Æ
-D	ºD	ºD	cQD	yÜD	yD	™½D	ï|D
-ZD
-€1DpDìþD­D
-D
-îFD	ýÙD	¾WD
-$\D
-·‘D
-¼D
-aFD
-3D	óäD	µ	D	¾ÍD	éÛD	ôãD	ÝpD	ËuD
-7YD
-Ê~D
-¶úD
-Œ¿D
-¹fD
-üÜDÆÈD‚qDTßD¥ED
-÷ÉD
-PD
-Y…D
-\D
-å@D
-ÎâD
-^ŒD
-0“D	À D	QðD	tÿD	¶gD	Ë}D
-­D
-,"D
-äD	îD
-ÚD
-2–D
-.%D
-=,D
-j;D
-ˆD
-J-D	¿ÆD	™èD	ì’D	kD	 qD	åRD
-O0D-ÀD2´DÉ’D”dD/D/yD
-D	ÐáD	æD
-'ÒD
-UõD
-cûD
-acD
-%§D
-wD
-UD
-X=D
-ÏD	ÝšD	§D	áÁD
-T×D
-=›D
-'ÀD
-‰»D
-ïwD<EDd|D±D
-–$D
-X-D
-Z-D
-\‹D
-†?D
-ÉÁD
-¹D
-u«D
-V„D
- ÇD	›FD	©…D	êD	Ñ£D	¯gD	ÊD	ßýD	éÓD
-
-±D
-D
-33D
-[D
-ž±D
-”D
-`D	“#D	„&D	øeD	¥YD	Õ	D
-îD
-ƒäDÉ·D~¦DìeD±SDÿDhD
-uOD
-#ÍD
-	rD
-$yD
-uD
-ÝYD®D
-ø£Dp÷DkD™ÀD
-ª{D
-&ñD	éÜD
-	ˆD
-YáD
-4fD	õQD
-M¥D
-Ì§D
-ýèD
-ÛÇD
-oöD	øÖD
-7D
-3D
-H®D
-H	D
-dID
-_úD
-DUD
-@D
-CD	ï5D
-@D
-`ŒD
-QD	•ZD	‚QD	¢ŽD	ÊaD	ÐD	ÚdD	ëªD
-JD
-@>D
-ÆD	˜D	A9D	K©D	Ì D	²®D	×^D
-[D
-±·D£,DcôD·DX$D=”DDIàD
-§èD
-:ÖD
-<èD
-·jDcD¦éD¾®DŸ¿D«ÍDÆDž­D
-½PD
-Q`D
-JD
-g¸D
-8+D	áÌD
-
-úD
-HD
-ê:D
-ëæD
-uÔD
-ED
-ñD
-5íD
-åD	êyD	äD	ÝøD	ÐD	Ë}D	åìD
-iÕDA÷DàëD
-ìXD	ÃáD	lÂD	GD	¯D	²D	_½D	|†D	¶D	ÒªD	«ûD	[TD	$gD	9¬D	§yD	©ÖD	³¬D
-[D
-´æD½ÙD“´D&DÈ{D^üDqDÜbD
-ßŽD
-!•D
-KD
-‚ÂD>&D„6D’®DXÝDxDmDŸD·ÀD
-óÑD
-¤D
-ãD
-]´D
-#¹D
-:D
-qƒD
-ñçD0ôD
-ÏSD
-\TD
-ED
-(ÅD	Ñ(D	–'D	œWD	‹‡D	–¬D	¤\D	ß¥D
-ÚD%©DHD˜D	ÿŽD	šFD	°¤D	Ì»D	 íD	BîD	4D	ˆ5D	¸vD	¬'D	j\D	(ÂD	5D	‹tD	ËÒD	´±D	þæD
-z£D2JD¥ÖD€DòcD%mDáÝDŠ¥D
-§‡D	òKD	ÌÚD
-CD
-‚ûD
-ÀXD
-ÒáD!TDã¾DònDÊD$ÜDÆÏD”D
-ÔÓD
-¿D
-±D
-„D
-›gDD<ŠD
-ýÀD
-ÆcD
-­MD
-;ÊD	˜D	h®D	beD	}ZD	¨D	Î.D
-ôD
-jvD|ÞD/wD!D
-WD	çqD
-~D
- ÕD	ÿ£D	—D	mD	éD	¥™D	° D	“×D	RgD	I·D	‚²D
-àD
-¸D
-÷D
-!ØD
-_D
-OeD
-ãÁDMLDE4D—D
-èD
-fÊD	õD	è™D	û›D
-2D
-nD
-/£D
-3¦D
-§“D)¶DìâDÊzD£áD6;Dõ{Dp¸DƒD
-¸mD
-°ðD
-Ù¬D
-ØOD
-Í¦D
-õD
-øßD
-böD	’9D	PmD	laD	 ÷D	Ê‰D	úÿD
-(D
-=âD
-n³D
-ŽüD
-/¹D	ØäD	ä?D
-‡D
-êD	îzD	ÅSD	ÁD	xD	dND	…iD	¤ŸD	ŽoD	~ÄD	”1D
-RPD
-g¸D
-QˆD	û€D	£KD	—õD	ü…D
-„½D
-ðD
-`5D
-?.D
-#GD
-D
-I½D
-aðD
-gD	êD	ÜºD	ßÅD
-:KD6ÈDyÉDüDó˜DLæDFAD= D<mD
-‘bD
-ÖD
-|½D
-hD
-}‚D
-¹žD
-Å›D
-XD	¾KD	™&D	ßˆD
-$.D
-8$D
-IVD
-^¶D
-cÄD
--D	âD	Å¥D	Ç“D	¿ÞD	ª6D	˜ÍD	ƒ"D	ZzD	]ÃD	@D	1­D	]æD	ÒD	ªD	°ÔD	µ&D
-L›D
-Q$D
-(ND	ä<D	»ˆD	©=D	»ÔD	þfD
-iD	äD	ÃŠD	å”D
-‘µD´,DØ<D
-Ã¦D
- ÊD	ÑãD
-äD
-NvD
-—nD#<DJ D£Da÷D¿UD8ÛD$D
-]‹D
-KòD
-H{D
-60D
-BåD
-`VD
-WáD
-'µD	öÊD	ÒÁD
-^D
-EAD
-dZD
-hiD
-X²D
-mòD
-?©D	ÖBD	«*D	Á¹D	¸oD	uœD	QÿD	"uD	#D	-D	.D	3	D	[<D	¦
-D	ø D
-D
-1D
-ND
-"D
-hD
-LÇD
-e`D
-zD	Î–D	ØÄD	èVD	ÆÎD	³±D
-[D¦3D8\DKjDï;D
-CD	ÓìD
-êD
-P;D
-]àD
-©ßDnDÿ¼Dê|D}ªD¤øDS1D
-:VD
-CZD
-N$D
-5ÄD
-,¿D
-.ßD
-?D	ôtD
-pD	ìœD	Ó·D	ÔuD
-ÞD
-D	í"D
-‚D
-2D	¬ôD	}D	™D	¹%D	Œ“D	sHD	€²D	‹ñD	WÉD	d¬D	{‘D	Î¢D
-qvD
-â{D
-ÁàD
-ŸD
-kÔD
-¶qD'[D¡XD©4D
-ÄD
-D	ùuD	ãID	¹ƒD	»
-D
-"D]D‡D5ÀD‘„D
-…\D	ç7D
-QD
-¾D
-*DD
-ptD
-ÔpDÅsDßñD,nDÍD
-–D
-LD
-6«D
-2äD
-‘D	õD	ö=D	îWD	äD	ÞD	¬ƒD	‡€D	–±D	ÄÌD	ÛãD	ÌMD	ÑED	ÒD	›ÔD	bDD	XsD	 €D	ÇD	ÊÃD	ßÒD	ßŠD	¿YD	£D	¯D
-[…DvDÐD)sD
-Á¡D
-“DÈ›D DÄDé~DO^D
-oD
-2…D	ðÎD	§‹D	”õD	ÒýD4ÞDVDDŽœDåTD
-wND	ç´D	ÏTD	·ED	ÊøD
-ßD
-GD
-cºD
-yÑD
-mqD
-E-D
- dD	öD
-ÈD	ÿlD	Ç
-D	˜ëD	TD	º³D	ÔŒD	œmD	J`D	b
-D	«D	ÎÆD	ò<D	øJD	ÎTD	»ëD	˜jD	^ÈD	5™D	nšD	¹XD	åÚD
-ÎD
-;!D
-™D	©aD	‰:D
-P@D‡˜DÊûD©D
-±SD
-‚½DUÀD“DÔ»Da#DáD
-Ÿ=D
-TD
-qD	© D	spD	 ÐD
-dQDy¯D­rD
-èÞD
-)`D	Â³D	¤D	†YD	|lD	ÀTD	óD	æ!D	¾«D	šÚD	­‰D	Ù´D	ïcD	ùOD	æšD	½{D	x‰D	?aD	iÆD	’ZD	iõD	DùD	~:D	ºmD	ËÓD	ò	D
-²D
-AD	³:D	…D	‰ÖD	—qD	¥[D	¸’D
-  D
-|‡D
-ËÆD
-™WD	ëÈD	™AD
-ED
-ß¾DÓD
-ÃÃD
-‚D
- #DŸ&D÷Dˆ'DéD1éD
-yžD
-:D
-0$D	óÅD	ÍÖD
-íD
-\—D
-ËCD
-ë÷D
-€D
-0D	²mD	Ÿ|D	£ÓD	‡ìD	€ëD	¤iD	³ED	 D	€½D	˜‰D	è¢D	÷MD	Ð£D	ÑŠD	ã%D	¥ÐD	?>D	8PD	WÄD	e¤D	Ž¾D	¾ÄD	º¦D	¯æD	ÌöD
-cD
-ˆòD
-DD	ÞD	Ì—D	öµD
- <D	èúD
-9D
-èéDE-D
-ø‚D
-CËD	Ê“D	ørD
-bøD
-…ìD
-gÙD
-;gD	âD
-™DhäDò‡DsD
-ðD
-TéD
-MD
-ÖD
-1¾D
-3D
-MD
-YŒD
-ˆ D
-¸ÃD
-ˆÕD
-"D	ÃD	®ËD	ÅÇD	¸-D	„ˆD	‹ÁD	®¨D	³ED	——D	ŸKD	çSD
- •D	çOD	ó¬D
-£D	ÚÙD	yD	cmD	zD	•ÑD	ÉjD	ìD	Ä+D	’ÒD	¥ÙD
-]fD£gD
->D7,D
-ahD
-/iD
-'£D	á¼D
-ÀD
-Ã`D%=D
-õD
-c(D	âD	þéD
-JêD
-IsD
-,'D
-zD
-§ñD
-V<D
-ÆàDO)D£jDqüD
-Ê{D
-ÿD	îÜD
- D
-$>D
-#ŠD
-#ëD
-_œD
-³ŒD
-¯×D
-6\D	Ø6D	ÐHD	ØÒD	ØfD	Ê^D	Ù—D	ñÐD	ÝùD	¸üD	·âD	ÌPD	ø³D
-$ D
-ˆD	ìšD	¼ÝD	š€D	››D	¦BD	Â©D	äCD	çÓD	ÈUD	ªÀD	»D
-œ DRþDVDD
-ÅD
-1ÑD
-
-çD	àßD	û)D
-FXD
-µ›D
-Í»D
-YÓD	ýÃD
-ÉD
-L­D
-0TD
- ÖD
-BþDß;D
-¢•D
-¾!D}òD%-DG=D‚D
-‰=D
-,×D
-2<D
-5ðD
-BD
-:ªD
-\!D
-¯=D
-³²D
-IpD
-D	üD	ÇGD	¸ŠD	ì›D
-%üD
-.KD	ëqD	À‘D	ÀBD	µD	çVD
-'D	ðçD	‹ÄD	hD	ƒûD	£ÿD	¨WD	ÅªD	Í»D	±
-D	°D	Í@D	Ò»D
-> D†ÛD\DÕD
-²D
-¼D	æåD
-˜D
-0LD
-X¦D
-ƒD
-D
-i‹D
-4ÊD
-4UD
-2œD
-‰D
-)D
-fæDî{D
-¼©D
-¼fDƒqD6"DN3D¯”D
-â›D
-ŒD
-qoD
-pÚD
-·ÚD
-Ï—D
-ÒéD
-ücD
-ÎD
-tvD
-vpD
-_¯D	à@D	»D	ù*D
-;îD
-D>D	ÿöD	ÜaD	Ú%D	àD
-OD
-ºÛD
-OÛD	€ãD	=gD	x¬D	¾gD	áæD	ñêD	Æ D	’D	–êD	½D	¹ÚD	ÂD
-VóDqDîD
-_ D	È¿D	ã3D
-KdD
-vwD
-]«D
-K·D
-XhD
-fwD
-R.D
-;€D
-!¶D	õ×D	øÆD
-3èDA!D
-‰D
-j—D
-÷
-DuÑDl DD
-®ÂD
-s„D
-N D
-cuD
-Ý0D:.D\œDi	DD
-¬dD
-ÜuD
-àÎD
-nvD
-SD
-~¿D
-‘³D
-|PD
-:›D
-ûD
-¤D
-MÖD£]D‘DED
-@ŒD	qAD	‘•D	Û,D
-+²D
-JÇD
-ÛD	¸ÅD	´ÖD	Æ)D	ÇóD	Ë¥D
-AD
-aVD
-s½D	ûrD	¦ÈD
-&åD
-ãôD
-ïÂD
-u§D
-FD	÷kD
-8`D
-NžD
-L¯D
->äD	ðRD	¼ËD	æ4DqD
-—D
-9)D
-_™D
- 2D
-‡ïD
-IÈD
-/'D
-ÄD
-BD
--QD
-v*D
-ÏD àD7LD
-îlD
-µ’D
-ÓuD
-äD
-×ñD=kD¸òD’dD
-ùPD
-%D
-3 D
-2D
-ÆÞD¡D{ßD9XDŸD	æD	¬3D	ÙD
-:ÞD
-[qD
-	»D	ÑD	ä@D
- ÔD
-ÚD
-HÂD
-cËD
-NDD
-ÅD	Â„D	¼&D
-–ÝD·gDÔDRD
-A§D	ÇBD	ÐVD	èD
-&D
-JD	Î&D	ˆ§D	™xDÐDEðD
-‡ÃD
-I›D
-AD
-:D	Û8D	ôçD
-D
-D	ù‹D	ãöD
-½D
-jöD
-‘ŠD
-‚àD
-z
-D
-“D
-ŽD
-ÕµDÀD³ÞDamD9óD
-‹ƒD
-CÌD
-,aD
-ýÔDDIADØD.?D
-&†D	µvD	Ô`D
-'6D
-"cD	ÃD	µ›D	ñD
-ÃD
-LVD
-“D
-µ³D
-_YD	õ^D	ÊÿD	áÂD
-¼RDø–D@·DycD
-‡¡D	Ý;D	›D	}¥D	†D	ž D	oàD	0D	:šDŠ©DWD
-Ý5D
-UÍD
-ÈD	ÄçD	¢,D	ÖD	òD	æ=D	ßúD	¹D	µD	äD	÷€D	ö%D
-ëD
-*JD
-8îD
-TDE‚D#5DÚTD
-ÙäD
-læD
-X§D
-A”D
-³eD‹.Do^D§õDOèD
-D	²ÓD	ÜöD
-*§D
-&gD	ùÇD	ë,D	àD	ÖFD	óD
->8D
-v“D
-:@D	ërD	æpD	ö«D
-v±D_¬DŽMD
-ÑÍD
-'}D	ÑQD	šëD	bD	AD	W D	:þD÷ðDòbD~€D¹D
-×¶D
-O D	þüD	Ì¬D	­ÎD	°‰D	¨~D	®|D	ØD	ç›D	ÒrD	Ã>D	®†D	‰éD	§ßD	ê€D	þvD
-ŒD
-s D
-ßðD
-ÓGD
-ŽöD
-¿DCD
-ÜîD
-–›D
-åŒDz£DC³D
-g½D	ÒµD	š#D	ÑD
-I7D
-¼ÔD%ùD
-ÖrD
-oD	²ùD	¹«D	èÊD
-ÙD	ïD	À­D	ÖfD	çœD
-ÆD
-•²D
-‡ÑD	ØçD	ÏD	Œ7D	~²D	kÀD	K›D	SJD	WœD	3ËD	$DDÐND-þD
-¢²D
-`ìD
-FD
-6ÍD
-*D	ÜæD	ªÉD	‚ÍD	¢OD	ãHD	àD	ÍËD	­¨D	dÄD	wbD	ËžD	ÛED	ÁGD	ÖŒD
-¯D
-L+D
-¡ˆDµ—DÛÊDr²DõD
-U¡D
-\¸D
-nÛD
-(D	ÀòD	|D	©ÝD
->©DQÛDaÎDÐ”D
-iÏD	Ý½D	ÛÈD	èND	ýD	çD	µøD	¥ÙD	—XD	¡SD	ÕÒD	³CD	NðD	UÈD	kqD	w?D	¦yD	…D	}€D	™D	Ð‚D	ÏŸD
-5ÄD
-.™D
-9RD
-lªD
-¨@D
-­{D
-pËD
-ChD
-¡D	ž¶D	w!D	”&D	ŒpD	’>D	›’D	}zD	”0D	Ü9D	êD	§VD	ƒ•D	·_D	õLD
-|²D"“Dù+DríD`ÁD
->êD
-&ÛD
-MàD
-3¡D	ß¿D	–ÐD	ÑD
-²D(*D:D­D
-D‘D	µØD	¯tD	ºD	ÓóD	ç#D	×CD	ŠžD	/jD	5ºD	uD	v„D	lMD	 D	…ÙD	˜”D	ðæD	ú†D	½³D	ÅÃD
-$µD
-7¡                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

@@ -1,4 +1,0 @@
-New in v1.2 (11 August 2015):
-- pyfits dependency updated to astropy
-- new GUI for data and image display
-- scripts edited to be more pythonic, include example code for others' use
