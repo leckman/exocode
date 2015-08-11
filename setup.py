@@ -16,7 +16,7 @@ setup(name='exocode',
     author='Laura Eckman',
     author_email='leckman@mit.edu',
     license='MIT',
-    packages=['exoCode'],
+    packages=['src'],
     install_requires=[
         'matplotlib',
         'scikit-image',
