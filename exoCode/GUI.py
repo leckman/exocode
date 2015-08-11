@@ -2,14 +2,12 @@
 
 from Tkinter import *
 import tkFileDialog
+from PIL import Image,ImageTk
 import os
 from dataAcq import target_download
 import csv
 from analysis_script import target_analysis
-import matplotlib
-matplotlib.use("TkAgg")
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
-from matplotlib.figure import Figure
+import display
 
 class Data(Frame):
     def __init__(self,parent):
@@ -194,23 +192,36 @@ Main Blob Displacement | Threshold Value | Percent of Image White | Error       
 
     def image_display(self):
         pass
-        new = Tk()
-        new.geometry('600x600')
-        img_window= Display(new,self.index-1)
-        new.mainloop()
+        new = Toplevel(self.parent)
+        new.title('Images for Index '+str(self.index-1))
+        results_dir = self.num_data[self.catalog_file.split('/')[-1]]
+        img_window= Display(new,self.index-1,results_dir)
 
 class Display(Frame):
 
-    def __init__(self,parent,index):
+    def __init__(self,parent,index,catalog):
         Frame.__init__(self,parent)
         self.parent = parent
         self.index = index
-    
+        self.catalog = catalog
+        self.pack(fill=BOTH)
         self.initUI()
 
     def initUI(self):
-        self.parent.title('Images for Index '+str(self.index))
+        frame = Frame(self,relief=RAISED,bd=1)
+        frame.pack(expand=2,fill=BOTH)
+        close_button = Button(self,text='Close',command=self.parent.destroy)
 
+        out_file = self.catalog+'index_'+str(self.index)+'_images.png'
+        display.display(self.index,show=False,save=out_file)
+        target_images = Image.open(out_file)
+        background = ImageTk.PhotoImage(target_images)
+        label=Label(frame,image=background)
+        label.image=background
+
+        label.pack(fill=BOTH)
+        close_button.pack(side=RIGHT,padx=5,pady=5)
+        
         
 def main():
     root = Tk()

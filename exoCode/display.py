@@ -29,7 +29,12 @@ from array_processing import lingray, loggray
 
 ##############
 
-def display(target):
+def display(target,show=True,save=''):
+    '''
+    target: integer index of target to display
+    show: True to show figure
+    save: add file name to save figure
+    '''
     image_links = []
     data_container = 'FITS/TAM/' #alter to analyze a different set
     folder = data_container+'index-'+str(target)
@@ -82,7 +87,7 @@ def display(target):
     for i in range(len(img_2MASS)):
         img_width,radius,center = img_2MASS[i][2]
         axes[0][i].imshow(img_2MASS[i][0], cmap=plt.cm.bone)
-        axes[0][i].set_title(img_2MASS[i][1].split('/')[3])
+        axes[0][i].set_title(img_2MASS[i][1].split('--')[1])
         crosshairs = axes[0][i].plot([center], [center],
             linestyle='none', marker='+',mew=2,ms=10,color='MediumVioletRed')
         c = plt.Circle((center,center), radius, color='MediumVioletRed', linewidth=2, fill=False)
@@ -91,7 +96,7 @@ def display(target):
     for i in range(len(img_DSS)):
         img_width,radius,center = img_DSS[i][2]
         axes[1][i].imshow(img_DSS[i][0], cmap=plt.cm.bone)
-        axes[1][i].set_title(img_DSS[i][1].split('/')[3])
+        axes[1][i].set_title(img_DSS[i][1].split('--')[1])
         crosshairs = axes[1][i].plot([center], [center],
             linestyle='none', marker='+',mew=2,ms=10,color='MediumVioletRed')
         c = plt.Circle((center,center), radius, color='MediumVioletRed', linewidth=2, fill=False)
@@ -100,7 +105,7 @@ def display(target):
     for i in range(len(img_WISE)):
         img_width,radius,center = img_WISE[i][2]
         axes[2][i].imshow(img_WISE[i][0], cmap=plt.cm.bone)
-        axes[2][i].set_title(img_WISE[i][1].split('/')[3])
+        axes[2][i].set_title(img_WISE[i][1].split('--')[1])
         crosshairs = axes[2][i].plot([center], [center],
             linestyle='none', marker='+',mew=2,ms=10,color='MediumVioletRed')
         c = plt.Circle((center,center), radius, color='MediumVioletRed', linewidth=2, fill=False)
@@ -108,12 +113,19 @@ def display(target):
     for i in axes:
         for j in i:
             j.axis('off')
-    plt.title(target)
-    plt.show()
 
-#good_from_w3 = [1,15,20,25,34,35,41,44,47,53,55]
-#for i in good_from_w3:
-#    display(i)
+    if save: 
+        plt.savefig(save)
+
+    if show:
+        plt.show()
+
+
+if __name__ == '__main__':
+    good_from_w3 = [1,15,20,25,34,35,41,44,47,53,55]
+    for i in good_from_w3:
+        plt = display(i)
+        plt.show()
 
     
 
