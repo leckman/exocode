@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='exocode',
-    version='1.1.02',
+    version='1.2.00',
     description='Automation of debris disk detection',
     classifiers=[
         'Programming Language :: Python :: 2.7',
@@ -21,7 +21,7 @@ setup(name='exocode',
         'matplotlib',
         'scikit-image',
         'numpy',
-        'pyfits',
+        'astropy',
     ],
     include_package_data=True,
     zip_safe=False)

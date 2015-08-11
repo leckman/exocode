@@ -1,5 +1,14 @@
 include README.rst
+incluse LICENSE.txt
+include CHANGES.txt
 include exoCode/Catalogs/*.csv
 include exoCode/FITS/TAM/*/*
-include exoCode/Results/TAM/
+include exoCode/FITS/TAM/empty.txt
+include exoCode/FITS/RandSample-1000/empty.txt
+include exoCode/FITS/RandSample-2000/empty.txt
+include exoCode/FITS/Full_Cat/empty.txt
+include exoCode/Results/TAM/empty.txt
+include exoCode/Results/RandSample_1000/empty.txt
+include exoCode/Results/RandSample_2000/empty.txt
+include exoCode/Results/Full_Cat/empty.txt
 
