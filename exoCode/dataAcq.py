@@ -27,21 +27,6 @@ import os
 import xml.etree.ElementTree as ET
 import urllib2
 
-### EDITABLE ###############################################################################
-
-download_catalog = 'Catalogs/tam_cat_sample.csv' #catalog of targets
-max_indices = 56 #maximum index to download (set to all)
-data_container = 'FITS/TAM/' #containing folder for each target's image set
-
-############################################################################################
-
-with open(download_catalog,'rb') as csvfile: #rand cat
-    reader = csv.reader(csvfile)
-    table = [[e for e in r] for r in reader]
-
-#table row fmt:
-#ra,dec (degree measurements as strings)  
-
 size = 1.0 #arcmin
 base = 'http://irsa.ipac.caltech.edu/applications/finderchart/servlet/api?'
 surveys = '&survey=DSS&survey=2MASS&survey=WISE'
@@ -89,4 +74,21 @@ def target_download(i,data_container,table):
             img.write(urllib2.urlopen(img_link).read())
             img.close
 
-                
+if __name__ == '__main__':
+    ### EDITABLE ###############################################################################
+
+    download_catalog = 'Catalogs/tycho_2mass_wise_XMATCH-POS.csv' #catalog of targets
+    max_indices = 50 #maximum index to download
+    data_container = 'FITS/Full_Cat/' #containing folder for each target's image set
+
+    ############################################################################################
+
+    #table row fmt:
+    #ra,dec (degree measurements as strings)  
+    
+    with open(download_catalog,'rb') as csvfile: #rand cat
+        reader = csv.reader(csvfile)
+        table = [[e for e in r] for r in reader]
+
+    for i in range(max_indices):
+        target_download(i,data_container,table)      

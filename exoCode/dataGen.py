@@ -24,29 +24,30 @@ import time
 import csv 
 from analysis_script import target_analysis
 
+if __name__ == '__main__':
 
-#### EDITABLE ##################################################################################
+    #### EDITABLE ##################################################################################
 
-data_container = 'FITS/TAM/' #alter to analyze a different set
+    data_container = 'FITS/TAM/' #alter to analyze a different set
 
-min_index = 0
-max_index = 56 #alter to analyze only a subset
+    min_index = 0 
+    max_index = 56 #alter to analyze only a subset
 
-output_file = 'Results/TAM/ANALYSIS.csv' #make sure this file path actually exists!
+    output_file = 'Results/TAM/ANALYSIS.csv' #make sure this file path actually exists!
 
-################################################################################################
+    ################################################################################################
 
-t = time.time()
-full = target_analysis(min_index,data_container)
+    t = time.time()
+    full = target_analysis(min_index,data_container)
 
-for target in range (min_index+1,max_index):
-    k = target_analysis(target,data_container)
-    full.extend(k[1:])
+    for target in range (min_index+1,max_index):
+        k = target_analysis(target,data_container)
+        full.extend(k[1:])
 
-print time.time()-t, 'SECONDS'
+    print time.time()-t, 'SECONDS'
 
-with open(output_file,'wb') as f:
-    writer = csv.writer(f)
-    writer.writerows(full)
+    with open(output_file,'wb') as f:
+        writer = csv.writer(f)
+        writer.writerows(full)
 
     print 'COMPLETE'

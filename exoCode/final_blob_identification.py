@@ -113,3 +113,14 @@ def blobdoh_2MASS(image):
     fig.axes.get_yaxis().set_visible(False)
 
     return blob_dict
+
+if __name__ == '__main__':
+
+    #Example Usage:
+    '''
+    blobl(<WISE_img_array>,'WISE')
+    plt.draw()
+    raw_input('Enter to continue: ')
+    plt.close()
+    '''
+    pass

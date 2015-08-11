@@ -47,3 +47,14 @@ def loggray(x, survey='',a=None, b=None):
     if survey == 'DSS':
         return (np.log10(linval)-1.0)*0.5*255.0
     return (np.log10(linval)-1.0)*0.5
+
+if __name__ == '__main__':
+    #example usage
+    '''
+    WISE_image = <numpy array>
+    usable_WISE = loggray(WISE_image,survey='WISE')
+
+    DSS_image = <numpy array)
+    usable_DSS = lingray(DSS_image,survey='DSS')
+    '''
+    pass

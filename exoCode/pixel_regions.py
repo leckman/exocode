@@ -52,3 +52,7 @@ def middle_box(dimensions):
             enclosed.append((i,j))
     return enclosed
 
+if __name__ ==  '__main__':
+    print 'BORDER', circle_points(3,(5,5))[0]
+    print 'MIDDLE', middle_box((60,60))
+

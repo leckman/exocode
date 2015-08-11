@@ -23,7 +23,7 @@ import skimage
 from skimage import data
 from matplotlib import pyplot as plt
 import os
-import pyfits
+from astropy.io import fits as pyfits
 import numpy as np
 from math import sqrt
 
@@ -194,5 +194,7 @@ def target_analysis(target,data_container,verify=False):
 
     return output
 
-
+if __name__ == '__main__':
+    for row in target_analysis(3,'FITS/TAM/'):
+        print row
 

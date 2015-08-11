@@ -36,3 +36,10 @@ def threshold(img):
 
     return (global_otsu,threshold_global_otsu)
 
+if __name__ == '__main__':
+
+    #example usage:
+    #display threshold(<image>)[0] using matplotlib or similar
+    #print 'Threshold Value',threshold(<image>)[1]
+    pass
+

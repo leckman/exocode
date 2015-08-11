@@ -19,7 +19,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import pyfits
+from astropy.io import fits as pyfits
 from matplotlib import pyplot as plt
 import os
 from final_blob_identification import blobl, blobdoh_2MASS as blobh
@@ -111,9 +111,10 @@ def display(target):
     plt.title(target)
     plt.show()
 
-#good_from_w3 = [1,15,20,25,34,35,41,44,47,53,55]
-#for i in good_from_w3:
-#    display(i)
+if __name__ == '__main__':
+    good_from_w3 = [1,15,20]
+    for i in good_from_w3:
+        display(i)
 
     
 

@@ -21,7 +21,7 @@ THE SOFTWARE.
 '''
 
 import csv
-import pyfits
+from astropy.io import fits as pyfits
 from matplotlib import pyplot as plt
 from array_processing import loggray
 from diffraction import diffract
@@ -45,25 +45,27 @@ error = 14
 
 candidates = []
 
-f = open('Results/TAM/ANALYSIS.csv','rb')
-data = csv.reader(f)
-for row in data:
-    if row[band] == 'w3' and row[error] == 'NULL':
-        link = row[address][:-1] + '4'
-        inhdulist = pyfits.open(link)
-        image_data = inhdulist[0].data
-        new_image_data = loggray(image_data)
-        inhdulist.close()
+if __name__ == '__main__':
 
-        diffract(new_image_data)
-        plt.draw()
-        plt.pause(.1)
-        good = int(raw_input('Good? '))
-        if good:
-            candidates.append(row[index])
-        plt.close()
+    f = open('Results/TAM/ANALYSIS.csv','rb')
+    data = csv.reader(f)
+    for row in data:
+        if row[band] == 'w3' and row[error] == 'NULL':
+            link = row[address][:-1] + '4'
+            inhdulist = pyfits.open(link)
+            image_data = inhdulist[0].data
+            new_image_data = loggray(image_data)
+            inhdulist.close()
 
-with open('Results/TAM/good_candidates_from_w3.txt','wb') as k:
-    k.write('Good Candidate Index Numbers')
-    for target in candidates:
-        k.write('\n'+target)
+            diffract(new_image_data)
+            plt.draw()
+            plt.pause(.1)
+            good = int(raw_input('Good? '))
+            if good:
+                candidates.append(row[index])
+            plt.close()
+
+    with open('Results/TAM/good_candidates_from_w3.txt','wb') as k:
+        k.write('Good Candidate Index Numbers')
+        for target in candidates:
+            k.write('\n'+target)

@@ -84,4 +84,13 @@ def diffract(image,out_file='',display=False):
 
     return circle_points(int(round(radius)),(center,center))[1]
 
-
+if __name__ == '__main__':
+    #example code
+    '''
+    diffract(<image>)
+    plt.draw()
+    plt.pause(.1)
+    raw_input('Enter to continue: ')
+    plt.close()
+    '''
+    pass
