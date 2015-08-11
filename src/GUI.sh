@@ -17,12 +17,12 @@ class Data(Frame):
         self.initUI()
 
         self.image_data = {'tam_cat_sample.csv':'FITS/TAM/',
-                          'random_catalog_sample+1000.csv':'FITS/RandSample-1000/',
-                          'random_catalog_sample+2000.csv':'FITS/RandSample-2000/',
+                          'random_catalog_sample+1000.csv':'FITS/RandSample+1000/',
+                          'random_catalog_sample+2000.csv':'FITS/RandSample+2000/',
                           'tycho_2mass_wise_XMATCH-POS.csv':'FITS/Full_Cat/'}
         self.num_data = {'tam_cat_sample.csv':'Results/TAM/',
-                          'random_catalog_sample+1000.csv':'Results/RandSample_1000/',
-                          'random_catalog_sample+2000.csv':'Results/RandSample_2000/',
+                          'random_catalog_sample+1000.csv':'Results/RandSample+1000/',
+                          'random_catalog_sample+2000.csv':'Results/RandSample+2000/',
                           'tycho_2mass_wise_XMATCH-POS.csv':'Results/Full_Cat/'}
 
     def initUI(self):

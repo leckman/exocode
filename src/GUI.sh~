@@ -214,7 +214,7 @@ class Display(Frame):
         frame.pack(expand=2,fill=BOTH)
         close_button = Button(self,text='Close',command=self.parent.destroy)
 
-        out_file = self.catalog+'index_'+str(self.index)+'_images.png'
+        out_file = self.results+'index_'+str(self.index)+'_images.png'
         display.display(self.index,self.fits,show=False,save=out_file)
         target_images = Image.open(out_file)
         background = ImageTk.PhotoImage(target_images)

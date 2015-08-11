@@ -5,11 +5,11 @@ include src/GUI.sh
 include src/Catalogs/*.csv
 include src/FITS/TAM/*/*
 include src/FITS/TAM/empty.txt
-include src/FITS/RandSample-1000/empty.txt
-include src/FITS/RandSample-2000/empty.txt
+include src/FITS/RandSample+1000/empty.txt
+include src/FITS/RandSample+2000/empty.txt
 include src/FITS/Full_Cat/empty.txt
 include src/Results/TAM/empty.txt
-include src/Results/RandSample_1000/empty.txt
-include src/Results/RandSample_2000/empty.txt
+include src/Results/RandSample+1000/empty.txt
+include src/Results/RandSample+2000/empty.txt
 include src/Results/Full_Cat/empty.txt
 

@@ -31,7 +31,7 @@ if __name__ == '__main__':
     for i in files:
         missing[i] = []
     image_list = []
-    directory = 'FITS/'####+'/'
+    directory = 'FITS/'####+'/'  #CHANGE THIS
     RandSample = [f for f in os.walk(directory)]
     folders = sorted([directory+index for index in RandSample[0][1]])
     inventory= [[i for i in files]]
