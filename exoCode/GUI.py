@@ -195,15 +195,17 @@ Main Blob Displacement | Threshold Value | Percent of Image White | Error       
         new = Toplevel(self.parent)
         new.title('Images for Index '+str(self.index-1))
         results_dir = self.num_data[self.catalog_file.split('/')[-1]]
-        img_window= Display(new,self.index-1,results_dir)
+        image_dir = self.image_data[self.catalog_file.split('/')[-1]]
+        img_window= Display(new,self.index-1,results_dir,image_dir)
 
 class Display(Frame):
 
-    def __init__(self,parent,index,catalog):
+    def __init__(self,parent,index,results,images):
         Frame.__init__(self,parent)
         self.parent = parent
         self.index = index
-        self.catalog = catalog
+        self.results = results
+        self.fits = images
         self.pack(fill=BOTH)
         self.initUI()
 
@@ -213,7 +215,7 @@ class Display(Frame):
         close_button = Button(self,text='Close',command=self.parent.destroy)
 
         out_file = self.catalog+'index_'+str(self.index)+'_images.png'
-        display.display(self.index,show=False,save=out_file)
+        display.display(self.index,self.fits,show=False,save=out_file)
         target_images = Image.open(out_file)
         background = ImageTk.PhotoImage(target_images)
         label=Label(frame,image=background)
